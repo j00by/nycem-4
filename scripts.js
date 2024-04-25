@@ -523,6 +523,33 @@ const lineFeature = {
     ]
 };
 
+// Add SHORELINE animation geojson
+map.on('load', function() {
+    // Add GeoJSON source from an external URL
+    map.addSource('nyc-shoreline', {
+        type: 'geojson',
+        data: 'geojson/nyc-shoreline-2024.gson'  // URL to your GeoJSON
+    });
+
+    // Add a line layer using the source
+    map.addLayer({
+        id: 'shoreline-layer',
+        type: 'line',
+        source: 'nyc-shoreline',
+        layout: {
+            'visibility': 'none',  // Start with the layer hidden
+            'line-cap': 'round',
+            'line-join': 'round'
+        },
+        paint: {
+            'line-color': '#007cbf',
+            'line-width': 3,
+            'line-opacity': 0.8
+        }
+    });
+});
+
+
 // Add BIG U GeoJSON line feature to the map as a layer
 map.on('load', function () {
     map.addSource('line-source', {
@@ -596,6 +623,12 @@ map.on("load", function () {
                     });
                 });
             }
+                // Check if the active chapter is 'climate-gent-risk'
+    if (response.element.id === 'climate-gent-risk') {
+        map.setLayoutProperty('shoreline-layer', 'visibility', 'visible');
+    } else {
+        map.setLayoutProperty('shoreline-layer', 'visibility', 'none');
+    }
             // Check if the current chapter is 'climate-gent-les'
             if (response.element.id === 'climate-gent-les') {
                 // Show the BIG U line when active chapter
@@ -621,6 +654,10 @@ map.on("load", function () {
                 map.setLayoutProperty('line-layer', 'visibility', 'none');
                 popup.remove();
             }
+                // Optionally hide the layer when exiting the chapter
+    if (response.element.id === 'climate-gent-risk') {
+        map.setLayoutProperty('shoreline-layer', 'visibility', 'none');
+    }
         });
 
     window.addEventListener('scroll', function () {
