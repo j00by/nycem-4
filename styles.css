@@ -20,31 +20,6 @@ a:visited {
     position: fixed;
 }
 
-/* Inset map styles */
-#mapInset {
-    bottom: 50px;
-    right: 30px;
-    height: 180px;
-    width: 250px;
-    max-width: 100%;
-    position: fixed;
-    z-index: 1;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    pointer-events: none;
-}
-
-#mapInset .mapboxgl-ctrl-bottom-left {
-    display: none;
-}
-
-/* Hide inset map on small screens */
-@media (max-width: 500px) {
-    #mapInset {
-        display: none;
-    }
-}
-
 /* Header styles */
 #header {
     position: relative;
@@ -101,7 +76,6 @@ a:visited {
     width: 100%;
     margin: auto;
 }
-
 /* Theme-specific styles */
 .light {
     color: #000;
@@ -120,12 +94,12 @@ a:visited {
 }
 
 .step.active {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 .step div {
-    padding: 25px 50px;
-    line-height: 25px;
+    padding: 10px 25px;
+    line-height: 20px;
     font-size: 13px;
 }
 
@@ -149,4 +123,28 @@ a:visited {
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
     touch-action: unset;
+}
+
+/* Scroll to explore more on bottom of page for user tips*/
+.scroll-prompt {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    z-index: 1000;
+    cursor: pointer;
+    color: #fff; 
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-30px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-15px);
+    }
 }

@@ -1,6 +1,6 @@
 // Configuration for the scrollytelling map
 const config = {
-    style: 'mapbox://styles/j00by/cluvgg2l400il01pa2we18jys',
+    style: 'mapbox://styles/j00by/clvfgca9l02b001pe1e4eg0k8',
     accessToken: 'pk.eyJ1IjoiajAwYnkiLCJhIjoiY2x1bHUzbXZnMGhuczJxcG83YXY4czJ3ayJ9.S5PZpU9VDwLMjoX_0x5FDQ',
     showMarkers: false,
     markerColor: 'red',
@@ -19,8 +19,8 @@ const config = {
             image: '',
             description: 'Climate change is no longer a distant threat; it is a present reality that New York City is actively confronting. The New York City Panel on Climate Change (NPCC) provides critical projections that paint a vivid picture of what the future holds. According to the latest findings, New York City is expected to experience significant increases in temperature, with projections indicating a rise of up to 4.7 degrees by the 2030s.<br><br>Additionally, sea levels around the city could rise by as much as two feet in the same period, exacerbating the risk of flooding and storm surges. Precipitation is also predicted to increase, leading to more frequent and intense rainstorms. These changes underscore the urgency for comprehensive planning and action to protect the city and its residents from the escalating impacts of climate change, setting the stage for a deeper discussion on how these environmental shifts drive climate gentrification.<a href="https://climate.cityofnewyork.us/initiatives/nyc-panel-on-climate-change-npcc/" target="_blank">[1]</a>',
             location: {
-                center: [-73.97992, 40.95472],
-                zoom: 9.19,
+                center: [-73.63626, 41.28645],
+                zoom: 8,
                 pitch: 0.00,
                 bearing: 0.00
             },
@@ -47,7 +47,7 @@ const config = {
             hidden: false,
             title: 'WHAT IS THE HAZARD?',
             image: '',
-            description: 'Climate gentrification in New York City is a phenomenon where neighborhoods that are perceived as safer from the impacts of climate change become increasingly desirable. This desirability leads to higher property values and living costs, which can displace long-term, lower-income residents. The primary hazard associated with climate gentrification is the socio-economic displacement of vulnerable communities, who are often forced out of their neighborhoods due to rising costs. This displacement not only disrupts community networks and local economies but also increases the risk of social inequality. As climate change intensifies, areas less prone to flooding, extreme heat, and other climate-related risks become more attractive, exacerbating this trend.<a href="https://www.mdpi.com/2071-1050/16/1/42" target="_blank">[2]</a>',
+            description: 'Climate gentrification in New York City presents a significant challenge as neighborhoods outside the 100-year floodplain become increasingly attractive due to perceived lower risks from climate change. This trend leads to rising property values and living costs, potentially displacing long-term, low-income residents. The primary concern here is the socio-economic displacement of these vulnerable communities, which can disrupt local community networks and economies, thereby increasing social inequality.<a href="https://www.mdpi.com/2071-1050/16/1/42" target="_blank">[2]</a><br><br>The inclusion of the <a href="https://data.cityofnewyork.us/Environment/Sea-Level-Rise-Maps-2020s-100-year-Floodplain-/ezfn-5dsb" target="_blank">2020 sea level rise (100 year floodplain)</a> data on the map highlights how areas less susceptible to flooding and other climate-related risks are becoming focal points for real estate investment, intensifying the effects of climate gentrification. This development poses a threat to the preservation of the cultural and social fabric of New York City’s diverse neighborhoods.',
             location: {
                 center: [-74.01842, 40.68208],
                 zoom: 11.16,
@@ -70,9 +70,9 @@ const config = {
             id: 'climate-gent-redhook',
             alignment: 'left',
             hidden: false,
-            title: 'RED HOOK, BROOKLYN POST-HURRICANE SANDY',
-            image: 'https://user-images.githubusercontent.com/93134160/268441326-b2f37054-00e3-474e-9aec-da025f49e0e9.png',
-            description: 'Red Hook, a neighborhood in Brooklyn, New York, serves as a poignant example of climate gentrification. Historically an affordable area, Red Hook has undergone significant changes following Hurricane Sandy in 2012. The hurricane initially led many to believe that property values would plummet due to the extensive damage. However, the opposite occurred; as the neighborhood began to recover, it attracted new investments and an influx of wealthier residents drawn by the waterfronts allure and the potential for redevelopment. <br><br>This new wave of interest drove up property values and rent, making it increasingly difficult for long-standing, lower-income residents to afford their homes. Stories from the local community describe encounters with real estate developers and private equity firms offering large sums for properties, a situation perceived by many as predatory. These developments highlight the complex interplay between climate change, urban redevelopment, and social dynamics, where the benefits of revitalization often precipitate unintended consequences for the original residents of transitioning neighborhoods.<a href="https://www.theguardian.com/environment/2018/sep/25/red-hook-climate-change-floodplain-hurricane-sandy-gentrification" target="_blank">[3]</a>',
+            title: 'RED HOOK, BROOKLYN POST-SANDY',
+            image: 'https://insideclimatenews.org/wp-content/uploads/2017/10/red-hook-drone_lucas-mcgowan-via-bridge.png',
+            description: 'Climate gentrification is evident in Brooklyn’s Red Hook. Red Hook, once affordable, has changed significantly since Hurricane Sandy in 2012. Many thought property values would plummet after the hurricane due to its extensive damage. The opposite happened: as the neighborhood recovered, it attracted new investments and wealthier residents drawn to the waterfront and redevelopment potential. Interest rates increased property values and rent, making it harder for low-income, longtime residents to afford their homes. Residents report being exploited by real estate developers and private equity firms willing to pay high prices.<a href="https://www.theguardian.com/environment/2018/sep/25/red-hook-climate-change-floodplain-hurricane-sandy-gentrification" target="_blank">[3]</a>',
             location: {
                 center: [-74.01834, 40.67668],
                 zoom: 15,
@@ -90,8 +90,8 @@ const config = {
             alignment: 'right',
             hidden: false,
             title: 'WHAT IS THE RISK?',
-            image: 'https://user-images.githubusercontent.com/93134160/268436057-3de6e612-5e61-45b5-8678-ddb573921e53.png',
-            description: 'Climate gentrification poses a significant risk: the displacement of lower-income residents and communities of color who are priced out by the rising cost of living. As wealthier individuals seek refuge from climate threats in these safer areas, property values escalate, and the character and culture of neighborhoods shift, often to the detriment of long-standing residents.<br><br>This displacement threatens the rich cultural and social fabric that defines many of New York Citys diverse neighborhoods. The loss of these community networks and the local knowledge they hold not only diminishes the citys vibrant diversity but also undermines the social stability and resilience of affected areas.<a href="https://macblog.mcmaster.ca/literature-culture-anthropocene/blog/gentrification-and-global-warming-and-housing-oh-my-the-fate-of-nyc-in-a-rapidly-changing-climate/" target="_blank">[4]</a><a href="https://rebuildbydesign.org/uncategorized/climate-displacement-in-nyc/" target=_blank">[5]</a>',
+            image: 'https://rebuildbydesign.org/wp-content/uploads/elementor/thumbs/Screen-Shot-2024-02-14-at-2.19.44-PM-qjt7i0rh84szwhgj7dqzhynb9lurpmxg6e8lq5j0pk.png',
+            description: 'According to Rebuild by Designs’ report, <a href="https://rebuildbydesign.org/uncategorized/climate-displacement-in-nyc/" target=_blank">Making Space for our Neighbors</a>, over 40% of New York City’s population lives in areas facing a high risk of climate displacement. Climate gentrification threatens to displace low-income and minority communities due to rising costs. These safer areas attract wealthier individuals seeking refuge from climate threats, consequently raising property values and altering the character and culture of neighborhoods, often to the detriment of longtime residents. The diverse cultural and social fabric of many New York City neighborhoods is at risk due to this displacement. Losing these community networks and their local knowledge diminishes the citys diversity, social stability, and resilience.<a href="https://macblog.mcmaster.ca/literature-culture-anthropocene/blog/gentrification-and-global-warming-and-housing-oh-my-the-fate-of-nyc-in-a-rapidly-changing-climate/" target="_blank">[4]</a><br><br><font color="red">[Update map to add animated coastal shore line for NYC in stark reality way]</font>',
             location: {
                 center: [-73.85000, 40.69254],
                 zoom: 10,
@@ -110,10 +110,10 @@ const config = {
             hidden: false,
             title: 'ALEXIS FOOTES STRUGGLE IN THE ROCKAWAYS',
             image: 'https://images.newrepublic.com/2c271a227d2692ce9cf22170c9c16b99b7382dd4.jpeg?auto=format&fit=crop&crop=faces&ar=3%3A2&ixlib=react-9.0.2&w=1000&q=65&dpr=2',
-            description: 'Alexis Footes story is a stark illustration of the human cost of climate gentrification in New York City. After Hurricane Sandy ravaged the Rockaways, Alexis watched her once tight-knit community become a target for real estate developers and wealthier individuals seeking properties less prone to future flooding. Despite her efforts to stay, the rising cost of living and redevelopment in the wake of the storm made it increasingly difficult for her and her neighbors to afford their homes. The neighborhoods transformation, driven by the climate crisis and market forces, not only displaced long-standing residents like Alexis but also threatened the cultural identity and social fabric of the community she called home.<a href="https://newrepublic.com/article/154044/new-york-superstorm-sandy-economic-climate-migrants" target=_blank">[6]</a>',
+            description: 'Alexis Footes story is a stark illustration of the human cost of climate gentrification in New York City. After Hurricane Sandy ravaged the Rockaways, Alexis watched her once tight-knit community become a target for real estate developers and wealthier individuals seeking properties less prone to future flooding. Despite her efforts to stay, the rising cost of living and redevelopment in the wake of the storm made it increasingly difficult for her and her neighbors to afford their homes. The neighborhoods transformation, driven by the climate crisis and market forces, not only displaced long-standing residents like Alexis but also threatened the cultural identity and social fabric of the community she called home.<a href="https://newrepublic.com/article/154044/new-york-superstorm-sandy-economic-climate-migrants" target=_blank">[6]</a><br><br><font color="red">[Placeholder to add in research from NYCEM Jacob Ahola & Rachel Meltzer & NYCHA vulnerability with price tags/labels on map before and after Sandy]</font>',
             location: {
                 center: [-73.75909, 40.59793],
-                zoom: 15,
+                zoom: 17,
                 pitch: 72,
                 bearing: -72,
             },
@@ -124,17 +124,56 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-les',
+            id: 'rockaway-video',
             alignment: 'right',
             hidden: false,
-            title: 'LOWER EAST SIDE, MANHATTAN',
-            image: 'https://user-images.githubusercontent.com/93134160/268437145-e41f5341-563f-4abd-a049-01fc97efe729.png',
-            description: 'The Lower East Side (LES) is one of Manhattans most culturally diverse areas, with a significant portion of its waterfront vulnerable to flooding. The East Side Coastal Resiliency Project aims to protect the LES from rising sea levels and storm surges. However, these enhancements are driving up property values, making the LES increasingly unaffordable for its traditional residents.',
+            title: 'Drone Tour of Red Hook Post-Hurricane Sandy',
+            image: '',
+            description: 'This video provides a drone tour of Red Hook, capturing the significant transformations in the landscape following the devastating impact of Hurricane Sandy in October 2012. The footage highlights both the resilience and the challenges faced by the community as it continues to recover and adapt to climate-related changes.',
+            videoUrl: 'https://www.youtube.com/embed/07xJe529--U',  // rockaway video url
             location: {
-                center: [-73.97534, 40.71532],
-                zoom: 15.5,
-                pitch: 59,
-                bearing: 19.20,
+                center: [-73.75909, 40.59793],
+                zoom: 17,
+                pitch: 72,
+                bearing: -72,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: true,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-canarsie',
+            alignment: 'right',
+            hidden: false,
+            title: 'CANARSIE, BROOKLYN',
+            image: '',
+            description: 'Canarsie lies in the floodplains of Jamaica Bay and was among the neighborhoods hit hard by Hurricane Sandy. Post-Sandy, flood insurance reforms and rising premiums have disproportionately affected Canarsies long-term residents, many of whom are from minority backgrounds. This financial strain is compounded by speculative real estate investments focusing on its "flood-safe" status.',
+            location: {
+                center: [-73.88179, 40.64321],
+                zoom: 16,
+                pitch: 78,
+                bearing: -120.80,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-staten',
+            alignment: 'right',
+            hidden: false,
+            title: 'STATEN ISLANDS EAST SHORE',
+            image: 'https://user-images.githubusercontent.com/93134160/269315565-115bf384-f930-40f2-8874-c7fa0394c286.png',
+            description: 'The East Shore of Staten Island experienced severe devastation during Hurricane Sandy, leading to a significant rethink in terms of urban planning and community safety. Managed retreat initiatives and resilience building measures post-Sandy have made parts of the East Shore particularly attractive for new developments. These projects, while necessary, have altered the community fabric, introducing higher-income households and new demographics.',
+            location: {
+                center: [-74.06492, 40.59227],
+                zoom: 16.5,
+                pitch: 66,
+                bearing: 31.20,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -162,35 +201,16 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-canarsie',
+            id: 'climate-gent-les',
             alignment: 'left',
             hidden: false,
-            title: 'CANARSIE, BROOKLYN',
-            image: '',
-            description: 'Canarsie lies in the floodplains of Jamaica Bay and was among the neighborhoods hit hard by Hurricane Sandy. Post-Sandy, flood insurance reforms and rising premiums have disproportionately affected Canarsies long-term residents, many of whom are from minority backgrounds. This financial strain is compounded by speculative real estate investments focusing on its "flood-safe" status.',
+            title: 'LOWER MANHATTAN & BIG U PROJECT',
+            image: 'https://images.adsttc.com/media/images/533e/ba68/c07a/8091/a000/0096/large_jpg/BIG-U1_The-Harbor-Berm.jpg?1396619875',
+            description: 'Lower Manhattan, one of the city’s most culturally diverse areas, faces significant flooding risks along its waterfront. The BIG U project, a part of the broader East Side Coastal Resiliency efforts, aims to shield this area from rising sea levels and storm surges. However, these protective enhancements are contributing to rising property values, making Lower Manhattan increasingly unaffordable for its traditional residents<br><br><font color="red">[Update map to add BIG U geojson or more greenery to highlight the nature based solutions and RBD design competition. Or more markers with pop up box]</font>',
             location: {
-                center: [-73.90554, 40.63167],
-                zoom: 14,
-                pitch: 47,
-                bearing: 0,
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-staten',
-            alignment: 'left',
-            hidden: false,
-            title: 'STATEN ISLANDS EAST SHORE',
-            image: 'https://user-images.githubusercontent.com/93134160/269315565-115bf384-f930-40f2-8874-c7fa0394c286.png',
-            description: 'The East Shore of Staten Island experienced severe devastation during Hurricane Sandy, leading to a significant rethink in terms of urban planning and community safety. Managed retreat initiatives and resilience building measures post-Sandy have made parts of the East Shore particularly attractive for new developments. These projects, while necessary, have altered the community fabric, introducing higher-income households and new demographics.',
-            location: {
-                center: [-74.09198, 40.58925],
-                zoom: 14,
-                pitch: 48.50,
+                center: [-74.00595, 40.71672],
+                zoom: 13.87,
+                pitch: 59,
                 bearing: 0,
             },
             mapAnimation: 'flyTo',
@@ -284,6 +304,7 @@ const story = document.getElementById('story');
 const features = document.createElement('div');
 features.setAttribute('id', 'features');
 
+// HEADER DIV SETTINGS
 const header = document.createElement('div');
 
 if (config.title) {
@@ -310,22 +331,39 @@ if (header.innerText.length > 0) {
     story.appendChild(header);
 }
 
+// SCROLLY CHAPTERS DIV SETTINGS
+
 config.chapters.forEach((record, idx) => {
     const container = document.createElement('div');
     const chapter = document.createElement('div');
 
+    // Add chapter title
     if (record.title) {
         const title = document.createElement('h3');
         title.innerText = record.title;
         chapter.appendChild(title);
     }
 
+    // Add image if it exists
     if (record.image) {
         const image = new Image();
         image.src = record.image;
         chapter.appendChild(image);
     }
 
+    // Add YouTube video if a video URL is provided
+    if (record.videoUrl) {
+        const videoFrame = document.createElement('iframe');
+        videoFrame.setAttribute('src', record.videoUrl);
+        videoFrame.setAttribute('width', '100%');  // Adjust width as needed
+        videoFrame.setAttribute('height', '315');  // Adjust height as needed
+        videoFrame.setAttribute('frameborder', '0');
+        videoFrame.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture');
+        videoFrame.setAttribute('allowfullscreen', true);
+        chapter.appendChild(videoFrame);
+    }
+
+    // Add chapter description
     if (record.description) {
         const storyText = document.createElement('p');
         storyText.innerHTML = record.description;
@@ -349,6 +387,8 @@ config.chapters.forEach((record, idx) => {
 
 story.appendChild(features);
 
+// FOOTER DIV SETTINGS
+
 const footer = document.createElement('div');
 
 if (config.footer) {
@@ -362,6 +402,8 @@ if (footer.innerText.length > 0) {
     footer.setAttribute('id', 'footer');
     story.appendChild(footer);
 }
+
+// MAPBOX SETTINGS
 
 mapboxgl.accessToken = config.accessToken;
 
@@ -550,7 +592,7 @@ map.on("load", function () {
                 map.once('moveend', () => {
                     const rotateNumber = map.getBearing();
                     map.rotateTo(rotateNumber + 180, {
-                        duration: 30000, easing: (t) => t
+                        duration: 100000, easing: (t) => t
                     });
                 });
             }
@@ -561,7 +603,7 @@ map.on("load", function () {
                 // Show popup and set location
                 const popupCoordinates = [-73.97344, 40.72263];
                 popup.setLngLat(popupCoordinates)
-                    .setHTML('<h3>Climate Gentrification in LES</h3><p>This is a placeholder text for the popup box when viewing the Lower East Side chapter.</p>')
+                    .setHTML('<h3>East Side Coastal Resiliency</h3><p>This is a placeholder text for the popup box when viewing the Lower East Side chapter. ESCR project.</p>')
                     .addTo(map);
             }
         })
@@ -580,4 +622,9 @@ map.on("load", function () {
                 popup.remove();
             }
         });
+
+    window.addEventListener('scroll', function () {
+        document.querySelector('.scroll-prompt').style.display = 'none';
+    });
+
 });
