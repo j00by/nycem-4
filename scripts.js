@@ -8,7 +8,7 @@ const config = {
     title: 'CLIMATE GENTRIFICATION AND ITS IMPACT ON NEW YORK CITY',
     subtitle: 'John D Solomon Fellowship x New York City Emergency Management',
     byline: 'By: Judy Huynh',
-    footer: 'New York University | Spring 2024<br>Advanced GIS Interactive Web Mapping with Chris Whong<br>Source: <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling Template</a>',
+    footer: 'New York University | Spring 2024<br>Advanced GIS Interactive Web Mapping with Chris Whong<br>Special thanks to Ahmad Shaibani, Melissa Umberger, Jacob Ahola, & Rachel Meltzer!<br>Source: <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling Template</a>',
     // CHAPTERS FOR EACH SCROLL  
     chapters: [
         {
@@ -70,9 +70,9 @@ const config = {
             id: 'climate-gent-redhook',
             alignment: 'left',
             hidden: false,
-            title: 'RED HOOK, BROOKLYN POST-SANDY',
+            title: 'AN EXAMPLE SHOWN BY HURRICANE SANDY',
             image: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*GDKaeC3G2o6hxnUu31EbIQ.jpeg',
-            description: 'Red Hook, Brooklyn, is at risk of climate gentrification as Hurricane Sandy transforms the neighborhood. Red Hook, once low-income, has seen property values and rents rise, especially after the 2012 storm. Red Hook became Brooklyn’s priciest neighborhood for new home sales as its median sales price rose year over year. This shift is caused by wealthier professionals and new developments like waterfront luxury condos, which are less accessible to original residents. Despite vulnerabilities to future storms and sea level rise, waterfront views and significant flood defense investments make the neighborhood attractive.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[3]</a><br><br>Image Source: <a href="https://www.nydailynews.com/2017/10/26/five-years-after-hurricane-sandy-battered-new-york-city-signs-of-the-storm-remain/" target="_blank">Justin Lane, Metropoliss</a>',
+            description: 'Red Hook, Brooklyn, is at risk of climate gentrification as Hurricane Sandy transforms the neighborhood. Red Hook, once low-income, has seen property values and rents rise, especially after the 2012 storm. Red Hook became Brooklyn’s priciest neighborhood for new home sales as its median sales price rose year over year.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[3]</a><br><br>According to NYC Department of Finance, the property at <a href="https://propertyinformationportal.nyc.gov/parcels/parcel/3005560121" target="_blank"><b>109 King Street in Red Hook</b></a>, which received construction approval in 2016 following Hurricane Sandy, has experienced a significant escalation in its market value. Initially assessed at $623,000 in 2018, the property’s value has continued to climb, reaching $2,686,000 by the year 2024. This trend underscores the broader economic shifts occurring in the area post-disaster.<br><br>Image Source: <a href="https://www.nydailynews.com/2017/10/26/five-years-after-hurricane-sandy-battered-new-york-city-signs-of-the-storm-remain/" target="_blank">Justin Lane, Metropoliss</a>',
             location: {
                 center: [-74.01563, 40.67780],
                 zoom: 15,
@@ -86,7 +86,7 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-redhookpop',
+            id: 'climate-gent-redhook-dev',
             alignment: 'left',
             hidden: false,
             title: 'WATERFRONT DEVELOPMENT IN RED HOOK',
@@ -106,13 +106,13 @@ const config = {
         },
         {
             id: 'climate-gent-risk',
-            alignment: 'right',
+            alignment: 'left',
             hidden: false,
             title: 'WHAT IS THE RISK?',
             image: 'https://rebuildbydesign.org/wp-content/uploads/elementor/thumbs/Screen-Shot-2024-02-14-at-2.19.44-PM-qjt7i0rh84szwhgj7dqzhynb9lurpmxg6e8lq5j0pk.png',
             description: 'According to Rebuild by Designs’ report, <a href="https://rebuildbydesign.org/uncategorized/climate-displacement-in-nyc/" target=_blank">Making Space for our Neighbors</a>, over 40% of New York City’s population lives in areas facing a high risk of climate displacement. Climate gentrification threatens to displace low-income and minority communities due to rising costs. These safer areas attract wealthier individuals seeking refuge from climate threats, consequently raising property values and altering the character and culture of neighborhoods, often to the detriment of longtime residents. The diverse cultural and social fabric of many New York City neighborhoods is at risk due to this displacement. Losing these community networks and their local knowledge diminishes the citys diversity, social stability, and resilience.<a href="https://macblog.mcmaster.ca/literature-culture-anthropocene/blog/gentrification-and-global-warming-and-housing-oh-my-the-fate-of-nyc-in-a-rapidly-changing-climate/" target="_blank">[4]</a><br><br><font color="red">[Update map to add animated coastal shore line for NYC in stark reality way]</font>',
             location: {
-                center: [-73.76675, 40.69563],
+                center: [-74.17696, 40.70856],
                 zoom: 9.7,
                 pitch: 0,
                 bearing: 0,
@@ -125,11 +125,11 @@ const config = {
         },
         {
             id: 'climate-gent-humanstory',
-            alignment: 'right',
+            alignment: 'left',
             hidden: false,
-            title: 'ALEXIS FOOTES STRUGGLE IN THE ROCKAWAYS',
+            title: 'THE SHORTCOMINGS OF BUYOUT PROGRAMS',
             image: 'https://images.newrepublic.com/2c271a227d2692ce9cf22170c9c16b99b7382dd4.jpeg?auto=format&fit=crop&crop=faces&ar=3%3A2&ixlib=react-9.0.2&w=1000&q=65&dpr=2',
-            description: 'Alexis Footes story is a stark illustration of the human cost of climate gentrification in New York City. After Hurricane Sandy ravaged the Rockaways, Alexis watched her once tight-knit community become a target for real estate developers and wealthier individuals seeking properties less prone to future flooding. Despite her efforts to stay, the rising cost of living and redevelopment in the wake of the storm made it increasingly difficult for her and her neighbors to afford their homes. The neighborhoods transformation, driven by the climate crisis and market forces, not only displaced long-standing residents like Alexis but also threatened the cultural identity and social fabric of the community she called home.<a href="https://newrepublic.com/article/154044/new-york-superstorm-sandy-economic-climate-migrants" target=_blank">[6]</a><br><br><font color="red">[Placeholder to add in research from NYCEM Jacob Ahola & Rachel Meltzer & NYCHA vulnerability with price tags/labels on map before and after Sandy]</font>',
+            description: 'The story of Alexis Footes poignantly illustrates the profound human impact of climate gentrification, exacerbated by Hurricane Sandy in the Rockaways. This once tight-knit community, known for its close resident ties, quickly became a prime target for real estate developers and affluent buyers seeking properties less prone to future flooding.<br><br>As redevelopment accelerated, fueled by both the climate crisis and market dynamics, the cost of living soared. This made it increasingly difficult for long-standing residents like Alexis and her neighbors to afford their homes. Moreover, not everyone has the mobility to relocate to another area. Many residents, especially those with homes damaged by the storm, find themselves in need of a buyout program.<br><br>However, existing buyout programs often fall short. They are criticized for their slow approval processes and delayed funding payouts, which can leave vulnerable residents in limbo. Additionally, the options for retreat locations are frequently limited, failing to consider the social and economic ties that bind communities together.<a href="https://newrepublic.com/article/154044/new-york-superstorm-sandy-economic-climate-migrants" target=_blank">[6]</a><a href="https://www.rachelmeltzer.com/uploads/1/4/5/3/14532900/sandy_and_price_effects_082522_ellen_and_meltzer.pdf" target="_blank">[7]</a></font>',
             location: {
                 center: [-73.75909, 40.59793],
                 zoom: 17,
@@ -144,7 +144,7 @@ const config = {
         },
         {
             id: 'rockaway-video',
-            alignment: 'right',
+            alignment: 'fully',
             hidden: false,
             title: 'Drone Tour of Red Hook Post-Hurricane Sandy',
             image: '',
@@ -155,44 +155,6 @@ const config = {
                 zoom: 17,
                 pitch: 72,
                 bearing: -72,
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: true,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-canarsie',
-            alignment: 'right',
-            hidden: false,
-            title: 'CANARSIE, BROOKLYN',
-            image: '',
-            description: 'Canarsie lies in the floodplains of Jamaica Bay and was among the neighborhoods hit hard by Hurricane Sandy. Post-Sandy, flood insurance reforms and rising premiums have disproportionately affected Canarsies long-term residents, many of whom are from minority backgrounds. This financial strain is compounded by speculative real estate investments focusing on its "flood-safe" status.',
-            location: {
-                center: [-73.88179, 40.64321],
-                zoom: 16,
-                pitch: 78,
-                bearing: -120.80,
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-staten',
-            alignment: 'right',
-            hidden: false,
-            title: 'STATEN ISLANDS EAST SHORE',
-            image: 'https://user-images.githubusercontent.com/93134160/269315565-115bf384-f930-40f2-8874-c7fa0394c286.png',
-            description: 'The East Shore of Staten Island experienced severe devastation during Hurricane Sandy, leading to a significant rethink in terms of urban planning and community safety. Managed retreat initiatives and resilience building measures post-Sandy have made parts of the East Shore particularly attractive for new developments. These projects, while necessary, have altered the community fabric, introducing higher-income households and new demographics.',
-            location: {
-                center: [-74.06492, 40.59227],
-                zoom: 16.5,
-                pitch: 66,
-                bearing: 31.20,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -231,6 +193,44 @@ const config = {
                 zoom: 13.87,
                 pitch: 59,
                 bearing: 0,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-canarsie',
+            alignment: 'left',
+            hidden: false,
+            title: 'CANARSIE, BROOKLYN',
+            image: '',
+            description: 'Canarsie lies in the floodplains of Jamaica Bay and was among the neighborhoods hit hard by Hurricane Sandy. Post-Sandy, flood insurance reforms and rising premiums have disproportionately affected Canarsies long-term residents, many of whom are from minority backgrounds. This financial strain is compounded by speculative real estate investments focusing on its "flood-safe" status.',
+            location: {
+                center: [-73.88179, 40.64321],
+                zoom: 16,
+                pitch: 78,
+                bearing: -120.80,
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-staten',
+            alignment: 'left',
+            hidden: false,
+            title: 'STATEN ISLANDS EAST SHORE',
+            image: 'https://user-images.githubusercontent.com/93134160/269315565-115bf384-f930-40f2-8874-c7fa0394c286.png',
+            description: 'The East Shore of Staten Island experienced severe devastation during Hurricane Sandy, leading to a significant rethink in terms of urban planning and community safety. Managed retreat initiatives and resilience building measures post-Sandy have made parts of the East Shore particularly attractive for new developments. These projects, while necessary, have altered the community fabric, introducing higher-income households and new demographics.',
+            location: {
+                center: [-74.06492, 40.59227],
+                zoom: 16.5,
+                pitch: 66,
+                bearing: 31.20,
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -479,6 +479,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-risk') {
                 activateBoroughBoundaries();
             }
+            // Activate Red Hook developments layer when entering 'climate-gent-redhook-dev' chapter
+            if (chapterId === 'climate-gent-redhook-dev') {
+                map.setLayoutProperty('redhook-developments-layer', 'visibility', 'visible');
+            }
         })
 
         // EXITING SPECIFIC CHAPTERS CONFIG
@@ -496,6 +500,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-risk') {
                 deactivateBoroughBoundaries();
             }
+            // Hide Red Hook developments layer when exiting 'climate-gent-redhook-dev' chapter
+            if (chapterId === 'climate-gent-redhook-dev') {
+                map.setLayoutProperty('redhook-developments-layer', 'visibility', 'none');
+            }
 
             // Handle specific logic for 'climate-gent-les'
             if (chapterId === 'climate-gent-les') {
@@ -504,7 +512,7 @@ map.on("load", function () {
             }
         });
 
-            // Define Borough Info globally or in a scope accessible by handleClick
+    // Define Borough Info globally or in a scope accessible by handleClick
     const boroughInfo = {
         "Manhattan": "<h3>Manhattan</h3><p>Population: 1.6 million</p><p>Key Fact: Known for Wall Street and Times Square.</p>",
         "Brooklyn": "<h3>Brooklyn</h3><p>Population: 2.6 million</p><p>Key Fact: Known for Brooklyn Bridge and arts scene.</p>",
@@ -524,7 +532,7 @@ map.on("load", function () {
                 generateId: true
             });
         }
-    
+
         if (!map.getLayer('borough-boundaries-fill')) {
             map.addLayer({
                 id: 'borough-boundaries-fill',
@@ -549,7 +557,7 @@ map.on("load", function () {
                     ]
                 }
             });
-    
+
             map.addLayer({
                 id: 'borough-boundaries-line',
                 type: 'line',
@@ -560,71 +568,98 @@ map.on("load", function () {
                 }
             });
         }
-    
+
 
         map.on('mousemove', 'borough-boundaries-fill', handleMouseMove);
         map.on('mouseleave', 'borough-boundaries-fill', handleMouseLeave);
-}
-
-function deactivateBoroughBoundaries() {
-    map.off('mousemove', 'borough-boundaries-fill', handleMouseMove);
-    map.off('mouseleave', 'borough-boundaries-fill', handleMouseLeave);
-
-    if (map.getLayer('borough-boundaries-fill')) {
-        map.removeLayer('borough-boundaries-fill');
-        map.removeLayer('borough-boundaries-line');
     }
-    if (map.getSource('borough-boundaries')) {
-        map.removeSource('borough-boundaries');
-    }
-}
 
-function handleMouseMove(e) {
-    if (e.features.length > 0) {
-        const hoveredId = e.features[0].id;
-        if (hoveredPolygonId !== hoveredId) {
-            if (hoveredPolygonId !== null) {
+    function deactivateBoroughBoundaries() {
+        map.off('mousemove', 'borough-boundaries-fill', handleMouseMove);
+        map.off('mouseleave', 'borough-boundaries-fill', handleMouseLeave);
+
+        if (map.getLayer('borough-boundaries-fill')) {
+            map.removeLayer('borough-boundaries-fill');
+            map.removeLayer('borough-boundaries-line');
+        }
+        if (map.getSource('borough-boundaries')) {
+            map.removeSource('borough-boundaries');
+        }
+    }
+
+    function handleMouseMove(e) {
+        if (e.features.length > 0) {
+            const hoveredId = e.features[0].id;
+            if (hoveredPolygonId !== hoveredId) {
+                if (hoveredPolygonId !== null) {
+                    map.setFeatureState(
+                        { source: 'borough-boundaries', id: hoveredPolygonId },
+                        { hover: false }
+                    );
+                }
+                hoveredPolygonId = hoveredId;
                 map.setFeatureState(
                     { source: 'borough-boundaries', id: hoveredPolygonId },
-                    { hover: false }
+                    { hover: true }
                 );
             }
-            hoveredPolygonId = hoveredId;
+            map.getCanvas().style.cursor = 'pointer';
+        }
+    }
+
+    function handleMouseLeave() {
+        if (hoveredPolygonId !== null) {
             map.setFeatureState(
                 { source: 'borough-boundaries', id: hoveredPolygonId },
-                { hover: true }
+                { hover: false }
             );
+            hoveredPolygonId = null;
         }
-        map.getCanvas().style.cursor = 'pointer';
+        map.getCanvas().style.cursor = '';
     }
-}
 
-function handleMouseLeave() {
-    if (hoveredPolygonId !== null) {
-        map.setFeatureState(
-            { source: 'borough-boundaries', id: hoveredPolygonId },
-            { hover: false }
-        );
-        hoveredPolygonId = null;
+    function handleClick(e) {
+        const boro_name = e.features[0].properties.boro_name;
+        const content = boroughInfo[boro_name] || `<h3>${boro_name}</h3><p>No additional information available.</p>`;
+        new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(content)
+            .addTo(map);
     }
-    map.getCanvas().style.cursor = '';
-}
 
-function handleClick(e) {
-    const boro_name = e.features[0].properties.boro_name;
-    const content = boroughInfo[boro_name] || `<h3>${boro_name}</h3><p>No additional information available.</p>`;
-    new mapboxgl.Popup()
-        .setLngLat(e.lngLat)
-        .setHTML(content)
-        .addTo(map);
-}
+    let hoveredPolygonId = null;  // This should be accessible by all event handlers
 
-let hoveredPolygonId = null;  // This should be accessible by all event handlers
+
+
+    // Adding GeoJSON source for Red Hook developments
+    map.addSource('redhook-developments', {
+        type: 'geojson',
+        data: 'https://j00by.github.io/nycem-4/geojson/redhook-post-sandy-pluto.geojson'
+    });
+
+    // Adding a layer to represent the developments as red circles
+    map.addLayer({
+        id: 'redhook-developments-layer',
+        type: 'circle',
+        source: 'redhook-developments',
+        paint: {
+            'circle-radius': 5,
+            'circle-color': '#FF0000' // Red color for the circles
+        }
+    });
+
+    // Initially set this layer to be invisible
+    map.setLayoutProperty('redhook-developments-layer', 'visibility', 'none');
+
+
+
+
 
     // Hide scroll prompt on scroll
     window.addEventListener('scroll', function () {
         document.querySelector('.scroll-prompt').style.display = 'none';
     });
+
 
 });
 
