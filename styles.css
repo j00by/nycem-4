@@ -134,7 +134,7 @@ a:visited {
     animation: bounce 2s infinite;
     z-index: 1000;
     cursor: pointer;
-    color: #fff; 
+    color: #4424ba; 
 }
 
 @keyframes bounce {
