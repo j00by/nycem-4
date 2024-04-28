@@ -211,6 +211,9 @@ a:hover { /* Hover link color */
         right: 10px;  /* Ensure it remains at the right on mobile */
         font-size: 16px; /* Adjust font size if needed for smaller screens */
     }
+    #header h1 {
+        font-size: 18px; /* Smaller font size for mobile devices */
+    }
 
     
 }
