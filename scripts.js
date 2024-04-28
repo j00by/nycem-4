@@ -234,10 +234,10 @@ const config = {
             image: 'https://ars.els-cdn.com/content/image/3-s2.0-B9780123847034004196-f00419-10-9780123847034.jpg',
             description: '<b>1) Policy and Zoning Adjustments:</b> Revise zoning laws to mandate affordable housing quotas and enforce anti-displacement policies such as rent control and lease protections to protect vulnerable residents from displacement.<br><br><b>2) Community Control and Support:</b> Implement community land trusts to secure long-term housing affordability and actively plan retreat communities that are tailored to meet the social, economic, and cultural needs of relocated populations.<br><br><b>3) Resilience Building and Infrastructure:</b> Expand access to financial assistance programs that support property retrofitting and elevation, and require all neighborhood developments to include comprehensive climate resilience plans.<br><br><b>4) Financial and Insurance Innovations:</b> Work with governmental bodies to reformulate flood insurance policies to ensure they are affordable and accessible, and promote financial products designed to help low-income residents adapt to climate impacts without needing to relocate.<br><br><b>5) Learning from Experience and Enhancing Programs:</b> Utilize insights from the Build It Back program to refine future urban planning and resilience initiatives, and develop equitable, community-focused government-sponsored buyout programs that offer fair market value and facilitate voluntary relocation.<br><br>Image Source: <a href="https://www.sciencedirect.com/topics/earth-and-planetary-sciences/managed-realignment" target="_blank">Wolanski & Elliot, 2016</a>',
             location: {
-                center: [-73.97534, 40.71532],
-                zoom: 15.5,
-                pitch: 59,
-                bearing: 19.20,
+                center: [-74.01211, 40.71152],
+                zoom: 11,
+                pitch: 59.50,
+                bearing: 65.60,
                 speed: 1, // slower than the default speed
                 curve: 1.5, // smooths the entry and exit of the animation
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
