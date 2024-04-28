@@ -1,4 +1,4 @@
-// Configuration for the scrollytelling map
+// Configuration for the scrollytelling map, header titles and footer credits
 const config = {
     style: 'mapbox://styles/j00by/clvfgca9l02b001pe1e4eg0k8',
     accessToken: 'pk.eyJ1IjoiajAwYnkiLCJhIjoiY2x1bHUzbXZnMGhuczJxcG83YXY4czJ3ayJ9.S5PZpU9VDwLMjoX_0x5FDQ',
@@ -251,6 +251,9 @@ const config = {
     ]
 };
 
+
+
+
 // Mapbox adding layers
 
 let initLoad = true;
@@ -426,6 +429,9 @@ if (config.showMarkers) {
 }
 
 
+
+
+
 // Instantiate the scrollama
 const scroller = scrollama();
 
@@ -476,6 +482,10 @@ map.on("load", function () {
             // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-INTRO CHAPTER
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'visible');
+            }
+            // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-REDHOOK CHAPTER
+            if (chapterId === 'climate-gent-redhook') {
+                map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'visible');
             }
             // ACTIVATE BOROUGH BOUNDARIES POPUP ON CLIMATE-GENT-RISK CHAPTER
             if (chapterId === 'climate-gent-risk') {
@@ -531,6 +541,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'none');
             }
+            // Deactivate purple borough boundaries when exiting 'climate-gent-redhook'
+            if (chapterId === 'climate-gent-redhook') {
+                map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'none');
+            }
             // Deactivate borough boundaries when exiting 'climate-gent-risk'
             if (chapterId === 'climate-gent-risk') {
                 deactivateBoroughBoundaries();
@@ -539,7 +553,6 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-redhook-dev') {
                 map.setLayoutProperty('redhook-developments-layer', 'visibility', 'none');
             }
-
             // Deactivate the markers for the chapter climate-gent-cascade
             if (chapterId === 'climate-gent-cascade') {
                 markersArray.forEach(marker => marker.remove());
@@ -553,7 +566,11 @@ map.on("load", function () {
         });
 
 
-    // Add the GeoJSON source for borough boundaries
+
+    // ADDING LAYERS AND FUN INTERACTIVE THINGS ON MAPBOX BELOW
+
+
+    // CHAPTER CLIMATE-GENT-INTRO Add the GeoJSON source for borough boundaries
     map.addSource('borough-boundaries', {
         type: 'geojson',
         data: 'https://chriswhong.github.io/class-5-demo-2024/data/borough-boundaries-simplified.geojson'
@@ -575,7 +592,42 @@ map.on("load", function () {
 
 
 
-    // Define Borough Info globally or in a scope accessible by handleClick
+
+    // ******* NEED HELP HERE BELOW **************
+    // CHAPTER CLIMATE-GENT-REDHOOK WITH ZONING INFORMATION 
+    map.addSource('redhook-zoning', {
+        type: 'geojson',
+        data: 'https://j00by.github.io/nycem-4/geojson/pluto-redhook.json'
+    })
+    // add a fill layer using the PLUTO data
+    map.addLayer({
+        id: 'redhook-zoning-layer',
+        type: 'fill',
+        source: 'redhook-zoning',
+        paint: {
+            'fill-color': [
+                'match',
+                ['get', 'ZoneDist1'],
+                'R6', '#E6CEE3', // Lightest purple for residential zones
+                'R5', '#D8BFD8',
+                'PARK', '#DDA0DD', // Different color for parks
+                'M1-1/R5', '#BA55D3', // Mixed zone, closer to manufacturing
+                'M1-2', '#9932CC', // Starting of manufacturing zones
+                'M2-1', '#800080',
+                'M3-1', '#6A0DAD',
+                'M1-1', '#4B0082', // Darkest purple for heavy manufacturing
+                '#FFD700' // Fallback color for any other or undefined zones
+            ],
+            'fill-opacity': 0.8
+        }
+    });
+    // ******* NEED HELP HERE ABOVE **************
+
+
+
+
+
+    // CHAPTER CLIMATE-GENT-RISK Define Borough Info globally or in a scope accessible by handleClick
     const boroughInfo = {
         "Manhattan": "<h3>Manhattan</h3><p><b>Population:</b> 1.6 million</p><p><b>Coastal Population:</b> Known for its dense population and significant economic infrastructure, Manhattan has 110,353 residents living in the 1% annual chance floodplain and 86,729 in the 0.2% annual chance floodplain. The financial district and other low-lying areas are particularly at risk.</p>",
         "Brooklyn": "<h3>Brooklyn</h3><p><b>Population:</b> 2.6 million</p><p><b>Coastal Population:</b> Brooklyn has the highest number of residents living in the 1% annual chance floodplain, with 168,281 individuals. It also has a substantial population in the 0.2% annual chance floodplain, totaling 153,764 residents. Brooklyn's extensive waterfront and low-lying areas contribute to its high vulnerability to flooding.</p>",
@@ -693,8 +745,7 @@ map.on("load", function () {
     let hoveredPolygonId = null;  // This should be accessible by all event handlers
 
 
-
-    // GEOJSON FOR REDHOOK POST SANDY DEVELOPMENTS 2012-2023
+    // CHAPTER CLIMATE-GENT-REDHOOK-DEV POST SANDY DEVELOPMENTS 2012-2023
     map.addSource('redhook-developments', {
         type: 'geojson',
         data: 'https://j00by.github.io/nycem-4/geojson/redhook-post-sandy-pluto.geojson'
@@ -838,8 +889,7 @@ map.on("load", function () {
     ];
 
 
-
-    // ADD NYCHA ROCKAWAY GEOJSON SOURCE
+    // CHAPTER CLIMATE-GENT-NYCHA FOR ROCKAWAY VULNERABILITY
     map.addSource('nycha-rockaways', {
         type: 'geojson',
         data: 'https://j00by.github.io/nycem-4/geojson/rockaway-nycha.geojson'
