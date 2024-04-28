@@ -205,17 +205,17 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-canarsie',
+            id: 'climate-gent-bronx',
             alignment: 'left',
             hidden: false,
             title: 'BUSINESS OWNER IN HUMAN STORY CANARSIE, BROOKLYN',
             image: '',
             description: 'Canarsie lies in the floodplains of Jamaica Bay and was among the neighborhoods hit hard by Hurricane Sandy. Post-Sandy, flood insurance reforms and rising premiums have disproportionately affected Canarsies long-term residents, many of whom are from minority backgrounds. This financial strain is compounded by speculative real estate investments focusing on its "flood-safe" status.',
             location: {
-                center: [-73.88179, 40.64321],
-                zoom: 16,
-                pitch: 78,
-                bearing: -120.80,
+                center: [-73.92116, 40.83073],
+                zoom: 12.64,
+                pitch: 61.92,
+                bearing: 50.39,
                 speed: 1, // slower than the default speed
                 curve: 1.5, // smooths the entry and exit of the animation
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
@@ -527,6 +527,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-staten') {
                 map.setLayoutProperty('staten-sales-layer', 'visibility', 'visible');
             } 
+            // Activate visibility of the BRONX COMMERCIAL BUSINESSES
+            if (chapterId === 'climate-gent-bronx') {
+                map.setLayoutProperty('bronx-commercial-layer', 'visibility', 'visible');
+            }
         })
 
         // EXITING SPECIFIC CHAPTERS CONFIG
@@ -567,6 +571,10 @@ map.on("load", function () {
             // Deactivate visibility of the STATEN ISLAND 2023 SALES
             if (chapterId === 'climate-gent-staten') {
                 map.setLayoutProperty('staten-sales-layer', 'visibility', 'none');
+            }
+            // Deactivate visibility of the BRONX COMMERCIAL BUSINESSES
+            if (chapterId === 'climate-gent-bronx') {
+                map.setLayoutProperty('bronx-commercial-layer', 'visibility', 'none');
             }
 
         });
@@ -983,6 +991,28 @@ map.on("load", function () {
                 .addTo(map);
         });
 
+
+
+
+    // CHAPTER CLIMATE-GENT-BRONX COMMERCIAL BUSINESS OWNERS STORY
+    map.addSource('bronx-commercial', {
+        type: 'geojson',
+        data: 'https://j00by.github.io/nycem-4/geojson/bronx-commercial.geojson'
+    });
+
+    // Add a polygon layer to display the commercial areas
+    map.addLayer({
+        id: 'bronx-commercial-layer',
+        type: 'fill',
+        source: 'bronx-commercial',
+        layout: {
+            'visibility': 'none' // Initially set the layer to be hidden
+        },
+        paint: {
+            'fill-color': '#800080', // Purple color
+            'fill-opacity': 0.8
+        }
+    });
 
     // Hide scroll prompt on scroll
     window.addEventListener('scroll', function () {
