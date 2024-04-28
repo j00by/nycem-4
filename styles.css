@@ -7,9 +7,12 @@ body {
 
 /* Link styles */
 a,
-a:hover,
-a:visited {
-    color: #0071bc;
+a:visited { /* Normal and visited link color */
+    color: #4a0096;
+}
+
+a:hover { /* Hover link color */
+    color: #d4aaff;
 }
 
 /* Full viewport map container */
