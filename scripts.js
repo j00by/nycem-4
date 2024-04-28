@@ -967,7 +967,7 @@ map.on("load", function () {
             source: 'staten-2023-sales',
             layout: {
                 'icon-image': 'dollar-home', // Use the custom image as an icon.
-                'icon-size': 0.1, // Adjust the size as needed.
+                'icon-size': 0.2, // Adjust the size as needed.
                 'visibility': 'none' // Initially set the layer to be hidden.
             }
         });
@@ -1004,8 +1004,8 @@ map.on("load", function () {
             'visibility': 'none' // Initially set the layer to be hidden
         },
         paint: {
-            'fill-color': '#800080', // Purple color
-            'fill-opacity': 0.8
+            'fill-color': '#4a0096', // Purple color
+            'fill-opacity': 0.7
         }
     });
 
