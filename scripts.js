@@ -597,7 +597,7 @@ map.on("load", function () {
     // CHAPTER CLIMATE-GENT-REDHOOK WITH ZONING INFORMATION 
     map.addSource('redhook-zoning', {
         type: 'geojson',
-        data: 'https://j00by.github.io/nycem-4/geojson/pluto-redhook.json'
+        data: 'https://j00by.github.io/nycem-4/geojson/pluto-redhook.geojson'
     })
     // add a fill layer using the PLUTO data
     map.addLayer({
