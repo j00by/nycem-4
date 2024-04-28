@@ -12,13 +12,11 @@ This project is developed as part of the John D Solomon Fellowship for Public Se
 
 ## Acknowledgements
 
-Special thanks to:
+Special thanks to for their contributions and insights that greatly enhanced this project:
 - Ahmad Shaibani
 - Melissa Umberger
 - Jacob Ahola
 - Rachel Meltzer
-
-for their contributions and insights that greatly enhanced this project.
 
 ## Project Overview
 
