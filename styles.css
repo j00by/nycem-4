@@ -50,11 +50,11 @@ a:hover { /* Hover link color */
 #footer {
     position: relative;
     width: 100%;
-    min-height: 5vh;
-    padding: 1vh 0 2vh;
+    min-height: 5vh; /* Keeps a minimum height */
+    padding: 0.5vh 0; /* Reduced vertical padding */
     text-align: center;
-    line-height: 25px;
-    font-size: 13px;
+    line-height: 20px; /* Reduced line height for tighter text spacing */
+    font-size: 13px; /* Font size remains the same for readability */
     z-index: 5;
 }
 
