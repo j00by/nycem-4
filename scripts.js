@@ -199,7 +199,7 @@ const config = {
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
