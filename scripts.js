@@ -73,11 +73,11 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-redhook',
+            id: 'climate-gent-redhook',  // *****NEED HELP, NOT IN THIS CHAPTER SECTION BUT IN MAPBOX CODING BELOW
             alignment: 'left',
             hidden: false,
             title: 'HOW HURRICANE SANDY RESHAPED RED HOOK',
-            videoUrl: 'https://www.youtube.com/embed/07xJe529--U',  // Red Hook video url
+            videoUrl: 'https://www.youtube.com/embed/07xJe529--U',
             description: 'Red Hook, Brooklyn, is experiencing a profound transformation due to climate gentrification, particularly after Hurricane Sandy hit the area in 2012. Once a low-income neighborhood, Red Hook has seen a significant increase in property values and rents, becoming Brooklyn’s most expensive area for new home sales as its median sales price continues to rise annually.<a href="https://thebridgebk.com/extra_label/special-report/" target="_blank">[4]</a><br><br>The demographic landscape of Red Hook has also shifted dramatically. Historically, the neighborhood was predominantly Black, Hispanic, and Latino, with the population in 2000 comprising 43% Black and nearly half Hispanic or Latino. However, the latest data from 2023 paints a different picture, showing that 93.70% of the population is now White, with only 0.94% Black or African American, 1.98% Asian, 0.52% of other races, and 2.86% multiracial. This demographic shift is a clear indicator of the changing face of Red Hook, as the original community fabric unravels in the wake of new developments and rising costs, spotlighting the complex challenges of climate gentrification.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[5]</a><br><br>Video Source: <a href="https://www.youtube.com/watch?v=07xJe529--U&ab_channel=TheBridgeBK" target="_blank">TheBridgeBK</a>',
             location: {
                 center: [-74.01111, 40.68243],
