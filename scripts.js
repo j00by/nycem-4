@@ -3,11 +3,11 @@ const config = {
     style: 'mapbox://styles/j00by/clvfgca9l02b001pe1e4eg0k8',
     accessToken: 'pk.eyJ1IjoiajAwYnkiLCJhIjoiY2x1bHUzbXZnMGhuczJxcG83YXY4czJ3ayJ9.S5PZpU9VDwLMjoX_0x5FDQ',
     showMarkers: false,
-    markerColor: 'red',
+    markerColor: '',
     theme: 'light',
     title: 'CLIMATE GENTRIFICATION AND ITS IMPACT ON NEW YORK CITY',
-    subtitle: 'John D Solomon Fellowship x New York City Emergency Management',
-    byline: 'By: Judy Huynh',
+    subtitle: '',
+    byline: 'John D Solomon Fellowship  •  New York City Emergency Management  •  Judy Huynh',
     footer: 'New York University | Spring 2024<br>Advanced GIS Interactive Web Mapping with Chris Whong<br>Special thanks to Ahmad Shaibani, Melissa Umberger, Jacob Ahola, & Rachel Meltzer!<br>Source: <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling Template</a>',
     // CHAPTERS FOR EACH SCROLL  
     chapters: [
@@ -19,8 +19,8 @@ const config = {
             image: '',
             description: 'Climate change is no longer a distant threat; it is a present reality that New York City is actively confronting. The New York City Panel on Climate Change (NPCC) provides critical projections that paint a vivid picture of what the future holds. According to the latest findings, New York City is expected to experience significant increases in temperature, with projections indicating a rise of up to 4.7 degrees by the 2030s.<br><br>Additionally, sea levels around the city could rise by as much as two feet in the same period, exacerbating the risk of flooding and storm surges. Precipitation is also predicted to increase, leading to more frequent and intense rainstorms. These changes underscore the urgency for comprehensive planning and action to protect the city and its residents from the escalating impacts of climate change, setting the stage for a deeper discussion on how these environmental shifts drive climate gentrification.<a href="https://climate.cityofnewyork.us/initiatives/nyc-panel-on-climate-change-npcc/" target="_blank">[1]</a>',
             location: {
-                center: [-73.63626, 41.28645],
-                zoom: 8,
+                center: [-73.87883, 41.13358],
+                zoom: 8.2,
                 pitch: 0.00,
                 bearing: 0.00,
                 speed: 1, // slower than the default speed
@@ -124,8 +124,8 @@ const config = {
             image: 'https://rebuildbydesign.org/wp-content/uploads/elementor/thumbs/Screen-Shot-2024-02-14-at-2.19.44-PM-qjt7i0rh84szwhgj7dqzhynb9lurpmxg6e8lq5j0pk.png',
             description: 'According to NYC Department of City Planning, in 2020, over 400,000 people live within the 1% annual chance floodplain, a number that nearly doubles to over 780,000 when including those in the 0.2% annual chance floodplain.<a href="https://www.nyc.gov/assets/planning/download/pdf/plans-studies/resilient-neighborhoods/floodplain-by-numbers.pdf" target="_blank">[7]</a><br><br>However, Rebuild by Design’s report, <a href="https://rebuildbydesign.org/uncategorized/climate-displacement-in-nyc/" target=_blank">"Making Space for Our Neighbors"</a>, reveals a more alarming scenario, indicating that over 40% of New York City’s population resides in areas facing a high risk of climate displacement. This report underscores the urgent need for strategic planning and community-centric approaches to address the widening disparities and infrastructure challenges, advocating for proactive relocation strategies and innovative policies to ensure equitable treatment and resilience for all affected populations.',
             location: {
-                center: [-74.17696, 40.70856],
-                zoom: 9.7,
+                center: [-74.15874, 40.70703],
+                zoom: 10,
                 pitch: 0,
                 bearing: 0,
                 speed: 1.5, // slower than the default speed
@@ -146,7 +146,7 @@ const config = {
             image: '',
             description: '<iframe aria-label="Table" id="datawrapper-chart-wtMGY" src="https://datawrapper.dwcdn.net/wtMGY/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="713" data-external="1"></iframe>',
             location: {
-                center: [-73.86484, 40.61400],
+                center: [-73.86484, 40.6200],
                 zoom: 11,
                 pitch: 62.40,
                 bearing: -77.49,
@@ -166,12 +166,12 @@ const config = {
             hidden: false,
             title: 'NYCHA HOUSING VULNERABILITY IN ROCKAWAY',
             image: 'https://i0.wp.com/www.thecity.nyc/wp-content/uploads/2022/03/032522_edgemere_2-scaled.jpg?resize=2048%2C1365&ssl=1',
-            description: 'Climate gentrification, coastal flooding, and socioeconomic constraints make NYCHA residents in Rockaway, Queens, more vulnerable. Flood-prevention measures have failed to address the area’s environmental dangers, heaping financial strain on NYCHA neighborhoods. Flood insurance and mortgage costs are growing, limiting these individuals’ ability to adjust or relocate and worsening their poor living situations despite climate concerns.<br><br>As Rockaway upzones and builds high-density housing, property values and rents may rise, driving out long-term, low-income residents. This development method may increase local appeal without strengthening infrastructure to sustain denser populations. Local desire for more inclusive planning and homeownership highlights the need for laws that protect vulnerable communities from climate change and urban expansion.<a href="https://www.thecity.nyc/2022/03/28/queens-coastal-fights-climate-change-plan-high-rise-rentals/" target=_blank">[8]</a>',
+            description: 'In Rockaway, Queens, a confluence of climate gentrification, coastal flooding, and socioeconomic constraints has heightened the vulnerability of NYCHA residents. Despite the looming threat of rising waters, flood-prevention measures have proven inadequate, placing an additional financial burden on these already economically strained neighborhoods. As the costs of flood insurance and mortgages continue to rise, residents find themselves increasingly unable to adapt or relocate, exacerbating their precarious living conditions amid escalating climate threats.<a href="https://www.thecity.nyc/2022/03/28/queens-coastal-fights-climate-change-plan-high-rise-rentals/" target=_blank">[8]</a><br><br>Rockaway NYCHA tenants’ harsh economic conditions are highlighted by housing costs that deviate from market trends. Queens’ median rent rose to $3,950 in January 2024, while NYCHA complexes’ average monthly gross rent is $453 to $548. This large gap highlights the economic struggles of Rockaway’s 6,179 NYCHA residents, a large portion of the poor. These residents, trapped in flood-prone neighborhoods with minimal financial resources, represent climate gentrification as they seek to find cheap alternatives in Queens’ quickly rising rental market.<a href="https://inhabit.corcoran.com/nyc-residential-rental-market-report-jan-2024/" target="_blank">[9]</a><a href="https://nycha.maps.arcgis.com/apps/webappviewer/index.html?id=41c6ff5e73ec459092e982060b7cf1a1" target="_blank">[10]</a>',
             location: {
-                center: [-73.75909, 40.59793],
-                zoom: 17,
-                pitch: 72,
-                bearing: -72,
+                center: [-73.79759, 40.58788],
+                zoom: 13,
+                pitch: 5.81,
+                bearing: -28.35,
                 speed: 1, // slower than the default speed
                 curve: 1.5, // smooths the entry and exit of the animation
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
@@ -183,17 +183,17 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-humanstory',
+            id: 'climate-gent-buyout',
             alignment: 'left',
             hidden: false,
             title: 'THE SHORTCOMINGS OF BUYOUT PROGRAMS',
             image: 'https://images.newrepublic.com/2c271a227d2692ce9cf22170c9c16b99b7382dd4.jpeg?auto=format&fit=crop&crop=faces&ar=3%3A2&ixlib=react-9.0.2&w=1000&q=65&dpr=2',
-            description: 'The story of Alexis Footes poignantly illustrates the profound human impact of climate gentrification, exacerbated by Hurricane Sandy in the Rockaways. This once tight-knit community, known for its close resident ties, quickly became a prime target for real estate developers and affluent buyers seeking properties less prone to future flooding.<br><br>As redevelopment accelerated, fueled by both the climate crisis and market dynamics, the cost of living soared. This made it increasingly difficult for long-standing residents like Alexis and her neighbors to afford their homes. Moreover, not everyone has the mobility to relocate to another area. Many residents, especially those with homes damaged by the storm, find themselves in need of a buyout program.<br><br>However, existing buyout programs often fall short. They are criticized for their slow approval processes and delayed funding payouts, which can leave vulnerable residents in limbo. Additionally, the options for retreat locations are frequently limited, failing to consider the social and economic ties that bind communities together.<a href="https://newrepublic.com/article/154044/new-york-superstorm-sandy-economic-climate-migrants" target=_blank">[6]</a><a href="https://www.rachelmeltzer.com/uploads/1/4/5/3/14532900/sandy_and_price_effects_082522_ellen_and_meltzer.pdf" target="_blank">[7]</a></font>',
+            description: 'Hurricane Sandy revealed the intricate relationship between FEMA buyouts and NYC’s Build It Back program in Staten Island, revealing triumphs and ongoing needs in climate gentrification. Staten Island residents have benefited from FEMA’s buyout program, which relocates properties from flood zones to safer regions, decreasing potential property loss and strengthening community resilience. However, the program’s long processing timeframes and competitive cash allocation have kept many locals waiting, delaying rehabilitation and creating uncertainty in affected regions. <br><br>However, NYC’s Build It Back program helped residents rebuild and elevate homes to survive future floods. Over 1,300 Staten Island homes have been repaired and elevated to flood compliance standards, but building delays and management inefficiencies have plagued the operation. These complications have worsened the housing crisis, forcing some households to move while waiting for relief. Both projects emphasize the need for more effective disaster recovery systems that meet immediate housing requirements and the long-term socioeconomic effects of climate gentrification on vulnerable populations.<a href="https://www.nyc.gov/assets/planning/download/pdf/plans-studies/resilient-neighborhoods/east-shore/summary-report-east-shore.pdf" target="_blank">[11]</a></font>',
             location: {
-                center: [-73.75909, 40.59793],
-                zoom: 17,
-                pitch: 72,
-                bearing: -72,
+                center: [-74.10144, 40.58507],
+                zoom: 13.3,
+                pitch: 58.40,
+                bearing: -44.22,
                 speed: 1, // slower than the default speed
                 curve: 1.5, // smooths the entry and exit of the animation
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
@@ -216,50 +216,6 @@ const config = {
                 zoom: 16,
                 pitch: 78,
                 bearing: -120.80,
-                speed: 1, // slower than the default speed
-                curve: 1.5, // smooths the entry and exit of the animation
-                easing: (t) => t * (2 - t) // easing function for a more gentle animation
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-les',
-            alignment: 'left',
-            hidden: false,
-            title: 'PROTECTING DISPLACEMENT CAUSED BY RESILIENT INFRASTRUCTURE',
-            image: 'https://images.adsttc.com/media/images/533e/ba68/c07a/8091/a000/0096/large_jpg/BIG-U1_The-Harbor-Berm.jpg?1396619875',
-            description: 'Lower Manhattan, one of the city’s most culturally diverse areas, faces significant flooding risks along its waterfront. The BIG U project, a part of the broader East Side Coastal Resiliency efforts, aims to shield this area from rising sea levels and storm surges. However, these protective enhancements are contributing to rising property values, making Lower Manhattan increasingly unaffordable for its traditional residents<br><br><font color="red">[Update map to add BIG U geojson or more greenery to highlight the nature based solutions and RBD design competition. Or more markers with pop up box]</font>',
-            location: {
-                center: [-74.00595, 40.71672],
-                zoom: 13.87,
-                pitch: 59,
-                bearing: 0,
-                speed: 1, // slower than the default speed
-                curve: 1.5, // smooths the entry and exit of the animation
-                easing: (t) => t * (2 - t) // easing function for a more gentle animation
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-staten',
-            alignment: 'left',
-            hidden: false,
-            title: 'STATEN ISLAND MITIGATION STRATEGY SPONGE ISLAND',
-            image: 'https://user-images.githubusercontent.com/93134160/269315565-115bf384-f930-40f2-8874-c7fa0394c286.png',
-            description: 'The East Shore of Staten Island experienced severe devastation during Hurricane Sandy, leading to a significant rethink in terms of urban planning and community safety. Managed retreat initiatives and resilience building measures post-Sandy have made parts of the East Shore particularly attractive for new developments. These projects, while necessary, have altered the community fabric, introducing higher-income households and new demographics.',
-            location: {
-                center: [-74.06492, 40.59227],
-                zoom: 16.5,
-                pitch: 66,
-                bearing: 31.20,
                 speed: 1, // slower than the default speed
                 curve: 1.5, // smooths the entry and exit of the animation
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
@@ -339,7 +295,7 @@ const story = document.getElementById('story');
 const features = document.createElement('div');
 features.setAttribute('id', 'features');
 
-// HEADER DIV SETTINGS
+// HEADER DIV SETTINGS 
 const header = document.createElement('div');
 
 if (config.title) {
@@ -470,7 +426,6 @@ if (config.showMarkers) {
 }
 
 
-
 // Instantiate the scrollama
 const scroller = scrollama();
 
@@ -518,6 +473,10 @@ map.on("load", function () {
                 });
             }
 
+            // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-INTRO CHAPTER
+            if (chapterId === 'climate-gent-intro') {
+                map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'visible');
+            }
             // ACTIVATE BOROUGH BOUNDARIES POPUP ON CLIMATE-GENT-RISK CHAPTER
             if (chapterId === 'climate-gent-risk') {
                 activateBoroughBoundaries();
@@ -535,21 +494,26 @@ map.on("load", function () {
                     const el = document.createElement('div');
                     el.className = 'custom-marker';
                     el.style.backgroundImage = `url('${detail.icon}')`; // Set custom icon
-                    el.style.width = '40px';  // Set the size of the marker
-                    el.style.height = '40px';
+                    el.style.width = '120px';  // Set the size of the marker
+                    el.style.height = '120px';
                     el.style.backgroundSize = 'cover';
-                    
+
                     const marker = new mapboxgl.Marker(el)
                         .setLngLat(detail.coordinates)
                         .addTo(map);
-                
+
                     const popup = new mapboxgl.Popup({ offset: 25 })
                         .setHTML(`<h3>${detail.title}</h3><p>${detail.description}</p>`);
-                
+
                     marker.setPopup(popup);
                     markersArray.push(marker);
-                });                
+                });
             }
+            // Activate visibility of the NYCHA Rockaways layer
+            if (chapterId === 'climate-gent-nycha') {
+                map.setLayoutProperty('nycha-rockaways-layer', 'visibility', 'visible');
+            }
+
 
         })
 
@@ -563,7 +527,10 @@ map.on("load", function () {
             if (chapter.onChapterExit.length > 0) {
                 chapter.onChapterExit.forEach(setLayerOpacity);
             }
-
+            // Deactivate purple borough boundaries when exiting 'climate-gent-intro'
+            if (chapterId === 'climate-gent-intro') {
+                map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'none');
+            }
             // Deactivate borough boundaries when exiting 'climate-gent-risk'
             if (chapterId === 'climate-gent-risk') {
                 deactivateBoroughBoundaries();
@@ -578,8 +545,35 @@ map.on("load", function () {
                 markersArray.forEach(marker => marker.remove());
                 markersArray = [];
             }
+            // Deactivate visibility of the NYCHA Rockaways layer
+            if (chapterId === 'climate-gent-nycha') {
+                map.setLayoutProperty('nycha-rockaways-layer', 'visibility', 'none');
+            }
 
         });
+
+
+    // Add the GeoJSON source for borough boundaries
+    map.addSource('borough-boundaries', {
+        type: 'geojson',
+        data: 'https://chriswhong.github.io/class-5-demo-2024/data/borough-boundaries-simplified.geojson'
+    });
+
+    // Add a layer to display the borough boundaries
+    map.addLayer({
+        id: 'borough-boundaries-layer',
+        type: 'fill',
+        source: 'borough-boundaries',
+        layout: {
+            'visibility': 'none' // Layer is initially hidden
+        },
+        paint: {
+            'fill-color': '#4a0096',  // Purple color
+            'fill-opacity': 0.3  // 30% opacity for the fill
+        }
+    });
+
+
 
     // Define Borough Info globally or in a scope accessible by handleClick
     const boroughInfo = {
@@ -843,6 +837,42 @@ map.on("load", function () {
         }
     ];
 
+
+
+    // ADD NYCHA ROCKAWAY GEOJSON SOURCE
+    map.addSource('nycha-rockaways', {
+        type: 'geojson',
+        data: 'https://j00by.github.io/nycem-4/geojson/rockaway-nycha.geojson'
+    });
+
+    // Add a layer to display the NYCHA data
+    map.addLayer({
+        id: 'nycha-rockaways-layer',
+        type: 'fill',
+        source: 'nycha-rockaways',
+        layout: {
+            'visibility': 'none'  // Layer is initially hidden
+        },
+        paint: {
+            'fill-color': '#4a0096',  // Purple color
+            'fill-opacity': 0.5
+        }
+    });
+    // Click event for NYCHA layer to show popup
+    map.on('click', 'nycha-rockaways-layer', function (e) {
+        const properties = e.features[0].properties;
+        const popupContent = `
+            <strong>Development:</strong> ${properties.DEVELOPMENT}<br>
+            <strong>Total Number of Apartments:</strong> ${properties.TOTAL_NUMBER_OF_APARTMENTS}<br>
+            <strong>Total Population:</strong> ${properties.TOTAL_POPULATION}<br>
+            <strong>Avg Monthly Gross Rent:</strong> $${properties.AVG_MONTHLY_GROSS_RENT}
+        `;
+
+        new mapboxgl.Popup()
+            .setLngLat(e.lngLat)
+            .setHTML(popupContent)
+            .addTo(map);
+    });
 
 
     // Hide scroll prompt on scroll
