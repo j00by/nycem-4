@@ -166,4 +166,43 @@ a:hover { /* Hover link color */
     box-shadow: 0 0 6px #000;
 }
 
+/* TOGGLE CHAPTERS ON AND OFF TO SEE MAPBOX  */
+
+.toggle-chapters {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    z-index: 10;
+    color: #fff;
+    background-image: linear-gradient(to right, #4a0096, #5b00b9);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 4px;
+    padding: 8px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Initially, the chapters are visible */
+#story {
+    transition: transform 0.3s ease-out;
+}
+
+/* This class hides the chapters softly */
+.hidden-chapters {
+    opacity: 0;
+    pointer-events: none; 
+    transition: opacity 0.3s ease-out;
+}
+
+
+@media (max-width: 600px) {
+    .toggle-chapters {
+        bottom: 10px; /* Ensure it remains at the bottom on mobile */
+        right: 10px;  /* Ensure it remains at the right on mobile */
+        font-size: 16px; /* Adjust font size if needed for smaller screens */
+    }
+
+    
+}
 

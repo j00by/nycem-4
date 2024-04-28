@@ -208,7 +208,7 @@ const config = {
             id: 'climate-gent-bronx',
             alignment: 'left',
             hidden: false,
-            title: 'BUSINESS OWNER IN HUMAN STORY CANARSIE, BROOKLYN',
+            title: 'SAFEGUARDING NYC BUSINESSES IN FLOODPLAINS',
             image: 'https://j00by.github.io/nycem-4/images/dcp-business-zoning.jpg',
             description: 'Climate change threatens businesses in flood-prone Bronx and Manhattan neighborhoods, especially floods. This circumstance could affect not only physical assets and daily operations but also many enterprises, especially smaller ones, financially. Businesses are unprepared for economic shocks like this and risk closure or relocation. This could cause business climate gentrification. As flood risks rise and financial costs mount, only wealthier or newer firms may be able to stay or move to high-risk areas. This could displace long-standing local enterprises.<br><br>The NYC Department of City Planning adopted Zoning for Coastal Flood Resiliency (ZCFR) to encourage businesses to develop flood-resistant buildings, which may lower flood insurance rates and speed catastrophe recovery. These strategies, coupled with <a href-"https://floodhelpny.org" target="_blank">FloodHelp NY’s</a> outreach and education, aim to raise awareness and enhance flood insurance uptake, helping New York businesses’ physical and financial resilience.<a href="https://www.nyc.gov/site/planning/plans/flood-resilience-zoning-text-update/flood-resilience-zoning-text-update.page" target="_blank">[13]</a>',
             location: {
@@ -291,6 +291,8 @@ const setLayerOpacity = (layer) => {
         map.setPaintProperty(layer.layer, prop, layer.opacity, options);
     });
 };
+
+
 
 // Stories configuration
 
@@ -396,6 +398,28 @@ if (footer.innerText.length > 0) {
     footer.setAttribute('id', 'footer');
     story.appendChild(footer);
 }
+
+
+ // TOGGLE ON AND OFF CHAPTERS
+ document.addEventListener('DOMContentLoaded', function() {
+    const toggleButton = document.getElementById('toggle-chapters');
+    const storyElement = document.getElementById('story');
+
+    if (toggleButton && storyElement) {
+        toggleButton.addEventListener('click', function() {
+            storyElement.classList.toggle('hidden-chapters');
+            // Optionally force the map to resize if it's still not behaving correctly
+            if (window.map) map.resize();
+        });
+    } else {
+        console.error('Toggle button or story element not found');
+    }
+});
+
+
+
+
+
 
 // MAPBOX SETTINGS
 
@@ -526,7 +550,7 @@ map.on("load", function () {
             // Activate visibility of the STATEN ISLAND 2023 SALES
             if (chapterId === 'climate-gent-staten') {
                 map.setLayoutProperty('staten-sales-layer', 'visibility', 'visible');
-            } 
+            }
             // Activate visibility of the BRONX COMMERCIAL BUSINESSES
             if (chapterId === 'climate-gent-bronx') {
                 map.setLayoutProperty('bronx-commercial-layer', 'visibility', 'visible');
@@ -947,13 +971,13 @@ map.on("load", function () {
 
 
     // CHAPTER CLIMATE-GENT-STATEN ISLAND 2023 SALES ON STORM SURGE
-     // Load an image from an external URL.
-     map.loadImage('https://j00by.github.io/nycem-4/images/dollar-home.png', function(error, image) {
+    // Load an image from an external URL.
+    map.loadImage('https://j00by.github.io/nycem-4/images/dollar-home.png', function (error, image) {
         if (error) throw error;
-        
+
         // Add the image to the map style.
         map.addImage('dollar-home', image);
-        
+
         // Add the source for Staten Island 2023 sales data
         map.addSource('staten-2023-sales', {
             type: 'geojson',
@@ -971,14 +995,14 @@ map.on("load", function () {
                 'visibility': 'none' // Initially set the layer to be hidden.
             }
         });
-    
+
         // Click event to show popup with property details
-        map.on('click', 'staten-sales-layer', function(e) {
+        map.on('click', 'staten-sales-layer', function (e) {
             const properties = e.features[0].properties;
             const description = `<strong>Address:</strong> ${properties.ADDRESS}<br>
                 <strong>Sale Price:</strong> $${properties.SALE_PRICE}<br>
                 <strong>Sale Date:</strong> ${properties.SALE_DATE}`;
-    
+
             new mapboxgl.Popup()
                 .setLngLat(e.lngLat)
                 .setHTML(description)
@@ -1013,7 +1037,6 @@ map.on("load", function () {
     window.addEventListener('scroll', function () {
         document.querySelector('.scroll-prompt').style.display = 'none';
     });
-
-
+    
 });
 
