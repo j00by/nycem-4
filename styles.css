@@ -43,6 +43,9 @@ a:hover { /* Hover link color */
     text-align: center;
 }
 
+#header h1 {
+    font-size: 18px; /* Smaller font size for h1 */
+}
 /* Footer styles */
 #footer {
     position: relative;
