@@ -183,12 +183,12 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-buyout',
+            id: 'climate-gent-staten',
             alignment: 'left',
             hidden: false,
-            title: 'THE SHORTCOMINGS OF BUYOUT PROGRAMS',
-            image: 'https://images.newrepublic.com/2c271a227d2692ce9cf22170c9c16b99b7382dd4.jpeg?auto=format&fit=crop&crop=faces&ar=3%3A2&ixlib=react-9.0.2&w=1000&q=65&dpr=2',
-            description: 'Hurricane Sandy revealed the intricate relationship between FEMA buyouts and NYC’s Build It Back program in Staten Island, revealing triumphs and ongoing needs in climate gentrification. Staten Island residents have benefited from FEMA’s buyout program, which relocates properties from flood zones to safer regions, decreasing potential property loss and strengthening community resilience. However, the program’s long processing timeframes and competitive cash allocation have kept many locals waiting, delaying rehabilitation and creating uncertainty in affected regions. <br><br>However, NYC’s Build It Back program helped residents rebuild and elevate homes to survive future floods. Over 1,300 Staten Island homes have been repaired and elevated to flood compliance standards, but building delays and management inefficiencies have plagued the operation. These complications have worsened the housing crisis, forcing some households to move while waiting for relief. Both projects emphasize the need for more effective disaster recovery systems that meet immediate housing requirements and the long-term socioeconomic effects of climate gentrification on vulnerable populations.<a href="https://www.nyc.gov/assets/planning/download/pdf/plans-studies/resilient-neighborhoods/east-shore/summary-report-east-shore.pdf" target="_blank">[11]</a></font>',
+            title: 'STATEN ISLAND’S FLOOD RISK AND REAL ESTATE',
+            image: 'https://cdn.vox-cdn.com/thumbor/HCObmpC7h7ly9AQsTvU-ib7CxOI=/0x0:3000x2000/1200x0/filters:focal(0x0:3000x2000):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/9547425/builditback_AP.jpg',
+            description: 'In 2023, 1,657 properties were sold on or within 100 feet of Staten Island’s sea level rise zones. A 100-foot radius from flood zones accounts for surrounding homes’ danger, not just those on the water. These sales totaled $703.5 million, averaging $425,000 per property. This market activity in flood-prone areas raises severe worries about new residents’ long-term safety and financial security. Many of these people may have 30-year mortgages on flood-prone properties, a danger compounded by climate change’s increasing sea levels and more severe weather.<br><br>NYC DOF statistics on 1-3 family dwellings intensifies the situation. A large majority of real estate transactions in high-risk areas involve these properties, generally primary residences. These zones have high sales, which exposes homeowner financial dangers and communal vulnerability. NYCEM and FEMA’s National Flood Insurance Program (NFIP) recognize Staten Island’s repeated losses, emphasizing the necessity for risk reduction initiatives.<a href="https://nychazardmitigation.com/documentation/hazard-profiles/flooding/" target="_blank">[11]</a></font><br><br>Image Source: <a href="https://ny.curbed.com/2017/10/27/16554180/hurricane-sandy-relief-build-it-back-housing" target="_blank">Emily Nonko, Curbed</a>',
             location: {
                 center: [-74.10144, 40.58507],
                 zoom: 13.3,
@@ -199,7 +199,7 @@ const config = {
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
@@ -232,7 +232,7 @@ const config = {
             hidden: false,
             title: 'HOW TO MANAGE THE RISK',
             image: 'https://cdn.vox-cdn.com/thumbor/UcD9DLL9IYtfQqHwuAR_hzVnjo8=/0x0:1243x647/1200x800/filters:focal(523x225:721x423)/cdn.vox-cdn.com/uploads/chorus_image/image/58147995/Screen_Shot_2017_12_29_at_1.58.48_PM.0.png',
-            description: 'Managing the risk of climate gentrification involves proactive and inclusive urban planning that prioritizes the needs of vulnerable populations.To effectively manage the risk of climate gentrification in New York City, the following actionable strategies can be implemented:<br><br><b>1) Enforce Affordable Housing Mandates:</b> Ensure that neighborhoods less vulnerable to climate impacts have enforced affordable housing quotas to keep these areas accessible for all income levels.<br><br><b>2) Enhance Community Engagement:</b> Develop robust community engagement programs that involve local residents in planning and decision-making processes, ensuring that their needs and voices are heard and addressed.<br><br><b>3) Provide Financial Assistance:</b> Offer financial support programs for homeowners and renters in high-risk areas to help them afford necessary property upgrades and insurance against climate risks.<br><br><b>4) Integrate Strategies into Broader Planning:</b> Incorporate these strategies into the citys overall climate adaptation and resilience planning to ensure a holistic approach that promotes equitable and sustainable urban growth.',
+            description: 'MENTION BUYOUT PROGRAM. Managing the risk of climate gentrification involves proactive and inclusive urban planning that prioritizes the needs of vulnerable populations.To effectively manage the risk of climate gentrification in New York City, the following actionable strategies can be implemented:<br><br><b>1) Enforce Affordable Housing Mandates:</b> Ensure that neighborhoods less vulnerable to climate impacts have enforced affordable housing quotas to keep these areas accessible for all income levels.<br><br><b>2) Enhance Community Engagement:</b> Develop robust community engagement programs that involve local residents in planning and decision-making processes, ensuring that their needs and voices are heard and addressed.<br><br><b>3) Provide Financial Assistance:</b> Offer financial support programs for homeowners and renters in high-risk areas to help them afford necessary property upgrades and insurance against climate risks.<br><br><b>4) Integrate Strategies into Broader Planning:</b> Incorporate these strategies into the citys overall climate adaptation and resilience planning to ensure a holistic approach that promotes equitable and sustainable urban growth.',
             location: {
                 center: [-73.97534, 40.71532],
                 zoom: 15.5,
@@ -523,8 +523,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-nycha') {
                 map.setLayoutProperty('nycha-rockaways-layer', 'visibility', 'visible');
             }
-
-
+            // Activate visibility of the STATEN ISLAND 2023 SALES
+            if (chapterId === 'climate-gent-staten') {
+                map.setLayoutProperty('staten-sales-layer', 'visibility', 'visible');
+            } 
         })
 
         // EXITING SPECIFIC CHAPTERS CONFIG
@@ -561,6 +563,10 @@ map.on("load", function () {
             // Deactivate visibility of the NYCHA Rockaways layer
             if (chapterId === 'climate-gent-nycha') {
                 map.setLayoutProperty('nycha-rockaways-layer', 'visibility', 'none');
+            }
+            // Deactivate visibility of the STATEN ISLAND 2023 SALES
+            if (chapterId === 'climate-gent-staten') {
+                map.setLayoutProperty('staten-sales-layer', 'visibility', 'none');
             }
 
         });
@@ -850,6 +856,11 @@ map.on("load", function () {
         }
     });
 
+
+
+    // FOR CHAPTER CLIMATE-GENT-CASCADE EFFECTS
+
+
     const markerDetails = [
         {
             coordinates: [-73.956555, 40.731390], // Greenpoint, Brooklyn
@@ -923,6 +934,54 @@ map.on("load", function () {
             .setHTML(popupContent)
             .addTo(map);
     });
+
+
+
+
+    // CHAPTER CLIMATE-GENT-STATEN ISLAND 2023 SALES ON STORM SURGE
+    map.addSource('staten-2023-sales', {
+        type: 'geojson',
+        data: 'https://j00by.github.io/nycem-4/geojson/staten-2023-sales.geojson'
+    });
+
+        // Add a layer to display the sales data
+        map.addLayer({
+            id: 'staten-sales-layer',
+            type: 'circle',
+            source: 'staten-2023-sales',
+            paint: {
+                'circle-radius': 4,
+                'circle-color': '#7100e6',
+                'circle-opacity': 0.8
+            },
+            layout: {
+                'visibility': 'none' // Initially set the layer to be hidden
+            }
+        });
+    
+        // Function to animate the circle radius
+        let radius = 5;
+        function pulse() {
+            if (map.getLayer('staten-sales-layer')) {  // Ensure the layer exists
+                radius = radius === 4 ? 6 : 4; // Toggle radius between 5 and 8
+                map.setPaintProperty('staten-sales-layer', 'circle-radius', radius);
+                setTimeout(pulse, 1000); // Adjust pulse speed here
+            }
+        }
+        pulse(); // Start pulsing
+    
+        // Click event to show popup with property details
+        map.on('click', 'staten-sales-layer', function(e) {
+            const properties = e.features[0].properties;
+            const description = `<strong>Address:</strong> ${properties.ADDRESS}<br>
+                <strong>Sale Price:</strong> $${properties.SALE_PRICE}<br>
+                <strong>Sale Date:</strong> ${properties.SALE_DATE}`;
+    
+            new mapboxgl.Popup()
+                .setLngLat(e.lngLat)
+                .setHTML(description)
+                .addTo(map);
+        });
 
 
     // Hide scroll prompt on scroll
