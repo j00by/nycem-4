@@ -947,36 +947,30 @@ map.on("load", function () {
 
 
     // CHAPTER CLIMATE-GENT-STATEN ISLAND 2023 SALES ON STORM SURGE
-    map.addSource('staten-2023-sales', {
-        type: 'geojson',
-        data: 'https://j00by.github.io/nycem-4/geojson/staten-2023-sales.geojson'
-    });
+     // Load an image from an external URL.
+     map.loadImage('https://j00by.github.io/nycem-4/images/dollar-home.png', function(error, image) {
+        if (error) throw error;
+        
+        // Add the image to the map style.
+        map.addImage('dollar-home', image);
+        
+        // Add the source for Staten Island 2023 sales data
+        map.addSource('staten-2023-sales', {
+            type: 'geojson',
+            data: 'https://j00by.github.io/nycem-4/geojson/staten-2023-sales.geojson'
+        });
 
-        // Add a layer to display the sales data
+        // Add a layer to display the sales data using the custom icon
         map.addLayer({
             id: 'staten-sales-layer',
-            type: 'circle',
+            type: 'symbol',
             source: 'staten-2023-sales',
-            paint: {
-                'circle-radius': 4,
-                'circle-color': '#7100e6',
-                'circle-opacity': 0.8
-            },
             layout: {
-                'visibility': 'none' // Initially set the layer to be hidden
+                'icon-image': 'dollar-home', // Use the custom image as an icon.
+                'icon-size': 0.1, // Adjust the size as needed.
+                'visibility': 'none' // Initially set the layer to be hidden.
             }
         });
-    
-        // Function to animate the circle radius
-        let radius = 5;
-        function pulse() {
-            if (map.getLayer('staten-sales-layer')) {  // Ensure the layer exists
-                radius = radius === 4 ? 6 : 4; // Toggle radius between 5 and 8
-                map.setPaintProperty('staten-sales-layer', 'circle-radius', radius);
-                setTimeout(pulse, 1000); // Adjust pulse speed here
-            }
-        }
-        pulse(); // Start pulsing
     
         // Click event to show popup with property details
         map.on('click', 'staten-sales-layer', function(e) {
@@ -991,6 +985,7 @@ map.on("load", function () {
                 .addTo(map);
         });
 
+    });
 
 
 
