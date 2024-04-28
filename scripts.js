@@ -483,7 +483,7 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'visible');
             }
-            // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-REDHOOK CHAPTER
+            // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-REDHOOK CHAPTER **** NEED HELP
             if (chapterId === 'climate-gent-redhook') {
                 map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'visible');
             }
@@ -541,7 +541,7 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'none');
             }
-            // Deactivate purple borough boundaries when exiting 'climate-gent-redhook'
+            // Deactivate purple borough boundaries when exiting 'climate-gent-redhook' **** NEED HELP
             if (chapterId === 'climate-gent-redhook') {
                 map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'none');
             }
@@ -593,7 +593,7 @@ map.on("load", function () {
 
 
 
-    // ******* NEED HELP HERE BELOW **************
+    // ******* NEED HELP HERE BELOW, UPDATED TO CORRECT CRS 84 **************
     // CHAPTER CLIMATE-GENT-REDHOOK WITH ZONING INFORMATION 
     map.addSource('redhook-zoning', {
         type: 'geojson',
@@ -618,7 +618,7 @@ map.on("load", function () {
                 'M1-1', '#4B0082', // Darkest purple for heavy manufacturing
                 '#FFD700' // Fallback color for any other or undefined zones
             ],
-            'fill-opacity': 0.8
+            'fill-opacity': 1
         }
     });
     // ******* NEED HELP HERE ABOVE **************
