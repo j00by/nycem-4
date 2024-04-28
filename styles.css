@@ -148,3 +148,13 @@ a:visited {
         transform: translateX(-50%) translateY(-15px);
     }
 }
+
+/* CUSTOM MARKERS FOR CLIMATE-GENT-CASCADE CHAPTER  */
+.custom-marker {
+    cursor: pointer;
+    border-radius: 50%;  
+    border: 2px solid white; 
+    box-shadow: 0 0 6px #000;
+}
+
+

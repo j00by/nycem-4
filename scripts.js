@@ -15,14 +15,17 @@ const config = {
             id: 'climate-gent-intro',
             alignment: 'fully',
             hidden: false,
-            title: 'UNDERSTANDING CLIMATE CHANGE IN NYC',
+            title: 'UNDERSTANDING CLIMATE CHANGE AND SEA LEVEL RISE IN NYC',
             image: '',
             description: 'Climate change is no longer a distant threat; it is a present reality that New York City is actively confronting. The New York City Panel on Climate Change (NPCC) provides critical projections that paint a vivid picture of what the future holds. According to the latest findings, New York City is expected to experience significant increases in temperature, with projections indicating a rise of up to 4.7 degrees by the 2030s.<br><br>Additionally, sea levels around the city could rise by as much as two feet in the same period, exacerbating the risk of flooding and storm surges. Precipitation is also predicted to increase, leading to more frequent and intense rainstorms. These changes underscore the urgency for comprehensive planning and action to protect the city and its residents from the escalating impacts of climate change, setting the stage for a deeper discussion on how these environmental shifts drive climate gentrification.<a href="https://climate.cityofnewyork.us/initiatives/nyc-panel-on-climate-change-npcc/" target="_blank">[1]</a>',
             location: {
                 center: [-73.63626, 41.28645],
                 zoom: 8,
                 pitch: 0.00,
-                bearing: 0.00
+                bearing: 0.00,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -47,12 +50,15 @@ const config = {
             hidden: false,
             title: 'WHAT IS THE HAZARD?',
             image: '',
-            description: 'Climate gentrification in New York City presents a significant challenge as neighborhoods outside the 100-year floodplain become increasingly attractive due to perceived lower risks from climate change. This trend leads to rising property values and living costs, potentially displacing long-term, low-income residents. The primary concern here is the socio-economic displacement of these vulnerable communities, which can disrupt local community networks and economies, thereby increasing social inequality.<a href="https://www.mdpi.com/2071-1050/16/1/42" target="_blank">[2]</a><br><br>The inclusion of the <a href="https://data.cityofnewyork.us/Environment/Sea-Level-Rise-Maps-2020s-100-year-Floodplain-/ezfn-5dsb" target="_blank">2020 sea level rise (100 year floodplain)</a> data on the map highlights how areas less susceptible to flooding and other climate-related risks are becoming focal points for real estate investment, intensifying the effects of climate gentrification. This development poses a threat to the preservation of the cultural and social fabric of New York City’s diverse neighborhoods.',
+            description: 'Climate gentrification in New York City presents a significant challenge as neighborhoods outside the 100-year floodplain become increasingly attractive due to perceived lower risks from climate change. This trend leads to rising property values and living costs, potentially displacing long-term, low-income residents. The primary concern here is the socio-economic displacement of these vulnerable communities, which can disrupt local community networks and economies, thereby increasing social inequality.<a href="https://www.mdpi.com/2071-1050/16/1/42" target="_blank">[2]</a><br><br>The inclusion of the <a href="https://data.cityofnewyork.us/Environment/Sea-Level-Rise-Maps-2020s-100-year-Floodplain-/ezfn-5dsb" target="_blank">2020 sea level rise (100 year floodplain)</a> data on the map reveals areas currently susceptible to flooding, yet despite this, the city continues to develop coastal waterfronts. This development is sparking a form of green gentrification, driven by resiliency projects that attract wealthier residents, subsequently displacing local communities with deep cultural and social ties to New York City’s diverse neighborhoods. Moreover, this map represents only current conditions and fails to project future sea level rise scenarios for 2050 or 2100. It also does not address the critical limitations of outdated FEMA flood maps, potentially underestimating the long-term risks and impacts of climate change on these areas.<a href="https://www.esri.com/about/newsroom/blog/new-york-city-flood-mapping/" target="_blank">[3]</a><br><br><font color="#4424ba">The term "100-year flood" is a technical designation used in floodplain management and insurance to describe a flood event that has a 1% chance of occurring in any given year.</font>',
             location: {
                 center: [-74.01842, 40.68208],
                 zoom: 11.16,
                 pitch: 50,
-                bearing: 21.60
+                bearing: 21.60,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
                 // flyTo additional controls-
                 // These options control the flight curve, making it move
                 // slowly and zoom out almost completely before starting
@@ -70,14 +76,17 @@ const config = {
             id: 'climate-gent-redhook',
             alignment: 'left',
             hidden: false,
-            title: 'AN EXAMPLE SHOWN BY HURRICANE SANDY',
-            image: 'https://miro.medium.com/v2/resize:fit:1100/format:webp/1*GDKaeC3G2o6hxnUu31EbIQ.jpeg',
-            description: 'Red Hook, Brooklyn, is at risk of climate gentrification as Hurricane Sandy transforms the neighborhood. Red Hook, once low-income, has seen property values and rents rise, especially after the 2012 storm. Red Hook became Brooklyn’s priciest neighborhood for new home sales as its median sales price rose year over year.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[3]</a><br><br>According to NYC Department of Finance, the property at <a href="https://propertyinformationportal.nyc.gov/parcels/parcel/3005560121" target="_blank"><b>109 King Street in Red Hook</b></a>, which received construction approval in 2016 following Hurricane Sandy, has experienced a significant escalation in its market value. Initially assessed at $623,000 in 2018, the property’s value has continued to climb, reaching $2,686,000 by the year 2024. This trend underscores the broader economic shifts occurring in the area post-disaster.<br><br>Image Source: <a href="https://www.nydailynews.com/2017/10/26/five-years-after-hurricane-sandy-battered-new-york-city-signs-of-the-storm-remain/" target="_blank">Justin Lane, Metropoliss</a>',
+            title: 'HOW HURRICANE SANDY RESHAPED RED HOOK',
+            videoUrl: 'https://www.youtube.com/embed/07xJe529--U',  // Red Hook video url
+            description: 'Red Hook, Brooklyn, is experiencing a profound transformation due to climate gentrification, particularly after Hurricane Sandy hit the area in 2012. Once a low-income neighborhood, Red Hook has seen a significant increase in property values and rents, becoming Brooklyn’s most expensive area for new home sales as its median sales price continues to rise annually.<a href="https://thebridgebk.com/extra_label/special-report/" target="_blank">[4]</a><br><br>The demographic landscape of Red Hook has also shifted dramatically. Historically, the neighborhood was predominantly Black, Hispanic, and Latino, with the population in 2000 comprising 43% Black and nearly half Hispanic or Latino. However, the latest data from 2023 paints a different picture, showing that 93.70% of the population is now White, with only 0.94% Black or African American, 1.98% Asian, 0.52% of other races, and 2.86% multiracial. This demographic shift is a clear indicator of the changing face of Red Hook, as the original community fabric unravels in the wake of new developments and rising costs, spotlighting the complex challenges of climate gentrification.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[5]</a><br><br>Video Source: <a href="https://www.youtube.com/watch?v=07xJe529--U&ab_channel=TheBridgeBK" target="_blank">TheBridgeBK</a>',
             location: {
-                center: [-74.01563, 40.67780],
-                zoom: 15,
-                pitch: 50,
-                bearing: 39.20,
+                center: [-74.01111, 40.68243],
+                zoom: 14,
+                pitch: 70,
+                bearing: 41.60,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -89,17 +98,20 @@ const config = {
             id: 'climate-gent-redhook-dev',
             alignment: 'left',
             hidden: false,
-            title: 'WATERFRONT DEVELOPMENT IN RED HOOK',
-            image: 'https://miro.medium.com/v2/resize:fit:4800/format:webp/1*NF5NvhTVHgUb1pHSmI6vrA.png',
-            description: 'The neighborhood’s race has changed in Red Hook, Brooklyn. Once predominantly Black, Hispanic, and Latino, the area has changed demographically. The population was 43% Black and nearly half Hispanic or Latino in 2000. The latest 2023 data shows that 93.70% of the population is White, 0.94% Black or African American, 1.98% Asian, 0.52% other race, and 2.86% multiracial.<br><br>Red Hook has developed, especially along its waterfront, since Hurricane Sandy. Developers have added 81 new buildings between 2012 and 2023, using resilience projects to capitalize on scenic views and water proximity. This is much higher than the 55 developments from 2000 to 2012. These changes show how climate resilience and real estate dynamics are transforming Red Hook, emphasizing the need for equitable development strategies that consider the area’s long-standing and diverse communities.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[3]</a><br><br>Image Source: <a href="https://www.nydailynews.com/2017/10/26/five-years-after-hurricane-sandy-battered-new-york-city-signs-of-the-storm-remain/" target="_blank">Justin Lane, Metropoliss</a>',
+            title: 'WATERFRONT DEVELOPMENT POST-SANDY',
+            image: '',
+            description: 'Red Hook has developed, especially along its waterfront, since Hurricane Sandy. Developers have added 81 new buildings between 2012 and 2023, using resilience projects to capitalize on scenic views and water proximity. This is much higher than the 55 developments from 2000 to 2012. These changes show how climate resilience and real estate dynamics are transforming Red Hook, emphasizing the need for equitable development strategies that consider the area’s long-standing and diverse communities.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[6]</a><br><br>According to NYC Department of Finance, the property at <a href="https://propertyinformationportal.nyc.gov/parcels/parcel/3005560121" target="_blank">109 King Street in Red Hook</a>, which received construction approval in 2016 following Hurricane Sandy, has experienced a significant escalation in its market value. Initially assessed at $623,000 in 2018, the property’s value has continued to climb, reaching $2,686,000 by the year 2024. This trend underscores the broader economic shifts occurring in the area post-disaster.<br><br><b>Red Hook, Brooklyn Population (2000-2022)</b><iframe aria-label="Interactive line chart" id="datawrapper-chart-rsqu6" src="https://datawrapper.dwcdn.net/rsqu6/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="398" data-external="1"></iframe>',
             location: {
-                center: [-74.01563, 40.67780],
-                zoom: 15,
-                pitch: 50,
-                bearing: 39.20,
+                center: [-74.01195, 40.67309],
+                zoom: 16.50,
+                pitch: 62.45,
+                bearing: -37.56,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
-            rotateAnimation: false,
+            rotateAnimation: true,
             callback: '',
             onChapterEnter: [],
             onChapterExit: []
@@ -110,12 +122,59 @@ const config = {
             hidden: false,
             title: 'WHAT IS THE RISK?',
             image: 'https://rebuildbydesign.org/wp-content/uploads/elementor/thumbs/Screen-Shot-2024-02-14-at-2.19.44-PM-qjt7i0rh84szwhgj7dqzhynb9lurpmxg6e8lq5j0pk.png',
-            description: 'According to Rebuild by Designs’ report, <a href="https://rebuildbydesign.org/uncategorized/climate-displacement-in-nyc/" target=_blank">Making Space for our Neighbors</a>, over 40% of New York City’s population lives in areas facing a high risk of climate displacement. Climate gentrification threatens to displace low-income and minority communities due to rising costs. These safer areas attract wealthier individuals seeking refuge from climate threats, consequently raising property values and altering the character and culture of neighborhoods, often to the detriment of longtime residents. The diverse cultural and social fabric of many New York City neighborhoods is at risk due to this displacement. Losing these community networks and their local knowledge diminishes the citys diversity, social stability, and resilience.<a href="https://macblog.mcmaster.ca/literature-culture-anthropocene/blog/gentrification-and-global-warming-and-housing-oh-my-the-fate-of-nyc-in-a-rapidly-changing-climate/" target="_blank">[4]</a><br><br><font color="red">[Update map to add animated coastal shore line for NYC in stark reality way]</font>',
+            description: 'According to NYC Department of City Planning, in 2020, over 400,000 people live within the 1% annual chance floodplain, a number that nearly doubles to over 780,000 when including those in the 0.2% annual chance floodplain.<a href="https://www.nyc.gov/assets/planning/download/pdf/plans-studies/resilient-neighborhoods/floodplain-by-numbers.pdf" target="_blank">[7]</a><br><br>However, Rebuild by Design’s report, <a href="https://rebuildbydesign.org/uncategorized/climate-displacement-in-nyc/" target=_blank">"Making Space for Our Neighbors"</a>, reveals a more alarming scenario, indicating that over 40% of New York City’s population resides in areas facing a high risk of climate displacement. This report underscores the urgent need for strategic planning and community-centric approaches to address the widening disparities and infrastructure challenges, advocating for proactive relocation strategies and innovative policies to ensure equitable treatment and resilience for all affected populations.',
             location: {
                 center: [-74.17696, 40.70856],
                 zoom: 9.7,
                 pitch: 0,
                 bearing: 0,
+                speed: 1.5, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-cascade',
+            alignment: 'left',
+            hidden: false,
+            title: 'CASCADING EFFECTS OF CLIMATE GENTRIFICATION',
+            image: '',
+            description: '<iframe aria-label="Table" id="datawrapper-chart-wtMGY" src="https://datawrapper.dwcdn.net/wtMGY/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="713" data-external="1"></iframe>',
+            location: {
+                center: [-73.86484, 40.61400],
+                zoom: 11,
+                pitch: 62.40,
+                bearing: -77.49,
+                speed: 0.5, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-nycha',
+            alignment: 'left',
+            hidden: false,
+            title: 'NYCHA HOUSING VULNERABILITY IN ROCKAWAY',
+            image: 'https://i0.wp.com/www.thecity.nyc/wp-content/uploads/2022/03/032522_edgemere_2-scaled.jpg?resize=2048%2C1365&ssl=1',
+            description: 'Climate gentrification, coastal flooding, and socioeconomic constraints make NYCHA residents in Rockaway, Queens, more vulnerable. Flood-prevention measures have failed to address the area’s environmental dangers, heaping financial strain on NYCHA neighborhoods. Flood insurance and mortgage costs are growing, limiting these individuals’ ability to adjust or relocate and worsening their poor living situations despite climate concerns.<br><br>As Rockaway upzones and builds high-density housing, property values and rents may rise, driving out long-term, low-income residents. This development method may increase local appeal without strengthening infrastructure to sustain denser populations. Local desire for more inclusive planning and homeownership highlights the need for laws that protect vulnerable communities from climate change and urban expansion.<a href="https://www.thecity.nyc/2022/03/28/queens-coastal-fights-climate-change-plan-high-rise-rentals/" target=_blank">[8]</a>',
+            location: {
+                center: [-73.75909, 40.59793],
+                zoom: 17,
+                pitch: 72,
+                bearing: -72,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -135,64 +194,9 @@ const config = {
                 zoom: 17,
                 pitch: 72,
                 bearing: -72,
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'rockaway-video',
-            alignment: 'fully',
-            hidden: false,
-            title: 'Drone Tour of Red Hook Post-Hurricane Sandy',
-            image: '',
-            description: 'This video provides a drone tour of Red Hook, capturing the significant transformations in the landscape following the devastating impact of Hurricane Sandy in October 2012. The footage highlights both the resilience and the challenges faced by the community as it continues to recover and adapt to climate-related changes.',
-            videoUrl: 'https://www.youtube.com/embed/07xJe529--U',  // rockaway video url
-            location: {
-                center: [-73.75909, 40.59793],
-                zoom: 17,
-                pitch: 72,
-                bearing: -72,
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-manage',
-            alignment: 'left',
-            hidden: false,
-            title: 'HOW TO MANAGE THE RISK',
-            image: 'https://user-images.githubusercontent.com/93134160/268436530-aaec0341-db34-403b-8b3f-3d2c976f9062.png',
-            description: 'Managing the risk of climate gentrification involves proactive and inclusive urban planning that prioritizes the needs of vulnerable populations.To effectively manage the risk of climate gentrification in New York City, the following actionable strategies can be implemented:<br><br><b>1) Enforce Affordable Housing Mandates:</b> Ensure that neighborhoods less vulnerable to climate impacts have enforced affordable housing quotas to keep these areas accessible for all income levels.<br><br><b>2) Enhance Community Engagement:</b> Develop robust community engagement programs that involve local residents in planning and decision-making processes, ensuring that their needs and voices are heard and addressed.<br><br><b>3) Provide Financial Assistance:</b> Offer financial support programs for homeowners and renters in high-risk areas to help them afford necessary property upgrades and insurance against climate risks.<br><br><b>4) Integrate Strategies into Broader Planning:</b> Incorporate these strategies into the citys overall climate adaptation and resilience planning to ensure a holistic approach that promotes equitable and sustainable urban growth.',
-            location: {
-                center: [-73.97534, 40.71532],
-                zoom: 15.5,
-                pitch: 59,
-                bearing: 19.20,
-            },
-            mapAnimation: 'flyTo',
-            rotateAnimation: false,
-            callback: '',
-            onChapterEnter: [],
-            onChapterExit: []
-        },
-        {
-            id: 'climate-gent-les',
-            alignment: 'left',
-            hidden: false,
-            title: 'LOWER MANHATTAN & BIG U PROJECT',
-            image: 'https://images.adsttc.com/media/images/533e/ba68/c07a/8091/a000/0096/large_jpg/BIG-U1_The-Harbor-Berm.jpg?1396619875',
-            description: 'Lower Manhattan, one of the city’s most culturally diverse areas, faces significant flooding risks along its waterfront. The BIG U project, a part of the broader East Side Coastal Resiliency efforts, aims to shield this area from rising sea levels and storm surges. However, these protective enhancements are contributing to rising property values, making Lower Manhattan increasingly unaffordable for its traditional residents<br><br><font color="red">[Update map to add BIG U geojson or more greenery to highlight the nature based solutions and RBD design competition. Or more markers with pop up box]</font>',
-            location: {
-                center: [-74.00595, 40.71672],
-                zoom: 13.87,
-                pitch: 59,
-                bearing: 0,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -204,7 +208,7 @@ const config = {
             id: 'climate-gent-canarsie',
             alignment: 'left',
             hidden: false,
-            title: 'CANARSIE, BROOKLYN',
+            title: 'BUSINESS OWNER IN HUMAN STORY CANARSIE, BROOKLYN',
             image: '',
             description: 'Canarsie lies in the floodplains of Jamaica Bay and was among the neighborhoods hit hard by Hurricane Sandy. Post-Sandy, flood insurance reforms and rising premiums have disproportionately affected Canarsies long-term residents, many of whom are from minority backgrounds. This financial strain is compounded by speculative real estate investments focusing on its "flood-safe" status.',
             location: {
@@ -212,6 +216,31 @@ const config = {
                 zoom: 16,
                 pitch: 78,
                 bearing: -120.80,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
+            },
+            mapAnimation: 'flyTo',
+            rotateAnimation: false,
+            callback: '',
+            onChapterEnter: [],
+            onChapterExit: []
+        },
+        {
+            id: 'climate-gent-les',
+            alignment: 'left',
+            hidden: false,
+            title: 'PROTECTING DISPLACEMENT CAUSED BY RESILIENT INFRASTRUCTURE',
+            image: 'https://images.adsttc.com/media/images/533e/ba68/c07a/8091/a000/0096/large_jpg/BIG-U1_The-Harbor-Berm.jpg?1396619875',
+            description: 'Lower Manhattan, one of the city’s most culturally diverse areas, faces significant flooding risks along its waterfront. The BIG U project, a part of the broader East Side Coastal Resiliency efforts, aims to shield this area from rising sea levels and storm surges. However, these protective enhancements are contributing to rising property values, making Lower Manhattan increasingly unaffordable for its traditional residents<br><br><font color="red">[Update map to add BIG U geojson or more greenery to highlight the nature based solutions and RBD design competition. Or more markers with pop up box]</font>',
+            location: {
+                center: [-74.00595, 40.71672],
+                zoom: 13.87,
+                pitch: 59,
+                bearing: 0,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -223,7 +252,7 @@ const config = {
             id: 'climate-gent-staten',
             alignment: 'left',
             hidden: false,
-            title: 'STATEN ISLANDS EAST SHORE',
+            title: 'STATEN ISLAND MITIGATION STRATEGY SPONGE ISLAND',
             image: 'https://user-images.githubusercontent.com/93134160/269315565-115bf384-f930-40f2-8874-c7fa0394c286.png',
             description: 'The East Shore of Staten Island experienced severe devastation during Hurricane Sandy, leading to a significant rethink in terms of urban planning and community safety. Managed retreat initiatives and resilience building measures post-Sandy have made parts of the East Shore particularly attractive for new developments. These projects, while necessary, have altered the community fabric, introducing higher-income households and new demographics.',
             location: {
@@ -231,6 +260,9 @@ const config = {
                 zoom: 16.5,
                 pitch: 66,
                 bearing: 31.20,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -239,17 +271,20 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-cta',
+            id: 'climate-gent-manage',
             alignment: 'fully',
             hidden: false,
-            title: 'SECURING AN EQUITABLE FUTURE',
-            image: '',
-            description: 'As New York City continues to adapt to the realities of climate change, it is essential to carefully consider the implications of climate gentrification. This study highlights the need for thoughtful urban planning and policy-making that ensures equitable access to safe and affordable housing, particularly in areas less affected by climate threats. Engaging with this issue is crucial for maintaining the cultural diversity and community integrity of our city. We encourage stakeholders at all levels—community members, policymakers, and researchers—to engage with the findings of this study. By working collaboratively, we can develop strategies that not only address the environmental challenges but also safeguard the social fabric of New York City.',
+            title: 'HOW TO MANAGE THE RISK',
+            image: 'https://cdn.vox-cdn.com/thumbor/UcD9DLL9IYtfQqHwuAR_hzVnjo8=/0x0:1243x647/1200x800/filters:focal(523x225:721x423)/cdn.vox-cdn.com/uploads/chorus_image/image/58147995/Screen_Shot_2017_12_29_at_1.58.48_PM.0.png',
+            description: 'Managing the risk of climate gentrification involves proactive and inclusive urban planning that prioritizes the needs of vulnerable populations.To effectively manage the risk of climate gentrification in New York City, the following actionable strategies can be implemented:<br><br><b>1) Enforce Affordable Housing Mandates:</b> Ensure that neighborhoods less vulnerable to climate impacts have enforced affordable housing quotas to keep these areas accessible for all income levels.<br><br><b>2) Enhance Community Engagement:</b> Develop robust community engagement programs that involve local residents in planning and decision-making processes, ensuring that their needs and voices are heard and addressed.<br><br><b>3) Provide Financial Assistance:</b> Offer financial support programs for homeowners and renters in high-risk areas to help them afford necessary property upgrades and insurance against climate risks.<br><br><b>4) Integrate Strategies into Broader Planning:</b> Incorporate these strategies into the citys overall climate adaptation and resilience planning to ensure a holistic approach that promotes equitable and sustainable urban growth.',
             location: {
-                center: [-73.97992, 40.95472],
-                zoom: 9.19,
-                pitch: 0.00,
-                bearing: 0.00
+                center: [-73.97534, 40.71532],
+                zoom: 15.5,
+                pitch: 59,
+                bearing: 19.20,
+                speed: 1, // slower than the default speed
+                curve: 1.5, // smooths the entry and exit of the animation
+                easing: (t) => t * (2 - t) // easing function for a more gentle animation
             },
             mapAnimation: 'flyTo',
             rotateAnimation: false,
@@ -440,8 +475,16 @@ if (config.showMarkers) {
 const scroller = scrollama();
 
 
+// Ensure global or properly scoped declaration of markersArray
+let markersArray = [];
+
+
 // INITIAL MAP LOAD, ADD SOURCES AND LAYERS HERE
 map.on("load", function () {
+    // Add navigation controls
+    var nav = new mapboxgl.NavigationControl();
+    map.addControl(nav, 'top-right');
+    // scroller settings
     scroller
         .setup({
             step: '.step',
@@ -469,8 +512,8 @@ map.on("load", function () {
             if (chapter.rotateAnimation) {
                 map.once('moveend', () => {
                     const rotateNumber = map.getBearing();
-                    map.rotateTo(rotateNumber + 180, {
-                        duration: 100000, easing: (t) => t
+                    map.rotateTo(rotateNumber - 180, {
+                        duration: 150000, easing: (t) => t
                     });
                 });
             }
@@ -483,6 +526,31 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-redhook-dev') {
                 map.setLayoutProperty('redhook-developments-layer', 'visibility', 'visible');
             }
+            // Activate the markers for the chapter climate-gent-cascade
+            if (chapterId === 'climate-gent-cascade') {
+                markersArray.forEach(marker => marker.remove()); // Clear previous markers if any
+                markersArray = []; // Reset the array
+
+                markerDetails.forEach(detail => {
+                    const el = document.createElement('div');
+                    el.className = 'custom-marker';
+                    el.style.backgroundImage = `url('${detail.icon}')`; // Set custom icon
+                    el.style.width = '40px';  // Set the size of the marker
+                    el.style.height = '40px';
+                    el.style.backgroundSize = 'cover';
+                    
+                    const marker = new mapboxgl.Marker(el)
+                        .setLngLat(detail.coordinates)
+                        .addTo(map);
+                
+                    const popup = new mapboxgl.Popup({ offset: 25 })
+                        .setHTML(`<h3>${detail.title}</h3><p>${detail.description}</p>`);
+                
+                    marker.setPopup(popup);
+                    markersArray.push(marker);
+                });                
+            }
+
         })
 
         // EXITING SPECIFIC CHAPTERS CONFIG
@@ -500,25 +568,26 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-risk') {
                 deactivateBoroughBoundaries();
             }
-            // Hide Red Hook developments layer when exiting 'climate-gent-redhook-dev' chapter
+            // Deactivate Red Hook developments layer when exiting 'climate-gent-redhook-dev' chapter
             if (chapterId === 'climate-gent-redhook-dev') {
                 map.setLayoutProperty('redhook-developments-layer', 'visibility', 'none');
             }
 
-            // Handle specific logic for 'climate-gent-les'
-            if (chapterId === 'climate-gent-les') {
-                map.setLayoutProperty('line-layer', 'visibility', 'none');
-                if (popup) popup.remove();
+            // Deactivate the markers for the chapter climate-gent-cascade
+            if (chapterId === 'climate-gent-cascade') {
+                markersArray.forEach(marker => marker.remove());
+                markersArray = [];
             }
+
         });
 
     // Define Borough Info globally or in a scope accessible by handleClick
     const boroughInfo = {
-        "Manhattan": "<h3>Manhattan</h3><p>Population: 1.6 million</p><p>Key Fact: Known for Wall Street and Times Square.</p>",
-        "Brooklyn": "<h3>Brooklyn</h3><p>Population: 2.6 million</p><p>Key Fact: Known for Brooklyn Bridge and arts scene.</p>",
-        "Queens": "<h3>Queens</h3><p>Population: 2.3 million</p><p>Key Fact: Known for its ethnic diversity.</p>",
-        "Bronx": "<h3>Bronx</h3><p>Population: 1.4 million</p><p>Key Fact: Home of the New York Yankees.</p>",
-        "Staten Island": "<h3>Staten Island</h3><p>Population: 0.5 million</p><p>Key Fact: Known for its green spaces.</p>"
+        "Manhattan": "<h3>Manhattan</h3><p><b>Population:</b> 1.6 million</p><p><b>Coastal Population:</b> Known for its dense population and significant economic infrastructure, Manhattan has 110,353 residents living in the 1% annual chance floodplain and 86,729 in the 0.2% annual chance floodplain. The financial district and other low-lying areas are particularly at risk.</p>",
+        "Brooklyn": "<h3>Brooklyn</h3><p><b>Population:</b> 2.6 million</p><p><b>Coastal Population:</b> Brooklyn has the highest number of residents living in the 1% annual chance floodplain, with 168,281 individuals. It also has a substantial population in the 0.2% annual chance floodplain, totaling 153,764 residents. Brooklyn's extensive waterfront and low-lying areas contribute to its high vulnerability to flooding.</p>",
+        "Queens": "<h3>Queens</h3><p><b>Population:</b> 2.3 million</p><p><b>Coastal Population:</b> Queens has 106,746 residents in the 1% annual chance floodplain and 48,662 in the 0.2% annual chance floodplain. Areas such as the Rockaways and parts of the northern shorelines are prone to flooding, affecting a large number of residents.</p>",
+        "Bronx": "<h3>Bronx</h3><b>Population:</b> 1.4 million</p><p><b>Coastal Population:</b> Interestingly, the Bronx has fewer residents in the 1% annual chance floodplain (17,731) compared to the 0.2% annual chance floodplain (41,632). This discrepancy may be due to the geographical and topographical features of the borough, which include several low-lying areas near the coast.</p>",
+        "Staten Island": "<h3>Staten Island</h3><b>Population:</b> 0.5 million</p><p><b>Coastal Population:</b> With its extensive shoreline, Staten Island has 31,439 residents in the 1% annual chance floodplain and 17,527 in the 0.2% annual chance floodplain. The borough's eastern and southern coasts are particularly vulnerable to storm surges and sea-level rise.</p>"
     };
 
     map.on('click', 'borough-boundaries-fill', handleClick);
@@ -631,27 +700,148 @@ map.on("load", function () {
 
 
 
-    // Adding GeoJSON source for Red Hook developments
+    // GEOJSON FOR REDHOOK POST SANDY DEVELOPMENTS 2012-2023
     map.addSource('redhook-developments', {
         type: 'geojson',
         data: 'https://j00by.github.io/nycem-4/geojson/redhook-post-sandy-pluto.geojson'
     });
 
-    // Adding a layer to represent the developments as red circles
-    map.addLayer({
-        id: 'redhook-developments-layer',
-        type: 'circle',
-        source: 'redhook-developments',
-        paint: {
-            'circle-radius': 5,
-            'circle-color': '#FF0000' // Red color for the circles
+    // LAYER FEATURE PAINT FOR REDHOOK DEVELOPMENTS
+    addDevelopmentLayer();
+
+    function addDevelopmentLayer() {
+        map.addLayer({
+            id: 'redhook-developments-layer',
+            type: 'circle',
+            source: 'redhook-developments',
+            paint: {
+                'circle-radius': [
+                    'interpolate',
+                    ['linear'],
+                    ['zoom'],
+                    15, 5,
+                    20, 15
+                ],
+                'circle-color': [
+                    'interpolate',
+                    ['linear'],
+                    ['to-number', ['get', 'YearBuilt']],
+                    2012, '#f1e3ff',  // Light purple for the oldest
+                    2013, '#e3c8ff',
+                    2014, '#d4aaff',
+                    2015, '#c58cfe',
+                    2016, '#b872ff',
+                    2017, '#aa57ff',
+                    2018, '#9935ff',
+                    2019, '#8c1cff',
+                    2020, '#7e00ff',
+                    2021, '#7100e6',
+                    2022, '#6500cd',
+                    2023, '#5100a4'   // Dark purple for the newest
+                ],
+                'circle-opacity': 0.9
+            }
+        });
+
+
+        // Initially set this layer to be invisible
+        map.setLayoutProperty('redhook-developments-layer', 'visibility', 'none');
+
+        // ANIMATING THE POINTS! COOL!
+        let radius = 5;
+        function pulse() {
+            radius = radius === 5 ? 8 : 5; // Toggle radius between 5 and 10
+            map.setPaintProperty('redhook-developments-layer', 'circle-radius', radius);
+            setTimeout(pulse, 1000); // Adjust pulse speed here
+        }
+        pulse(); // Start pulsing
+    }
+
+
+    // HOVER OVER THE POINTS FOR THE YEAR OF DEVELOPMENT VIA POPBOX
+
+    let popup = null; // This will hold the active popup
+
+    map.on('mouseenter', 'redhook-developments-layer', function (e) {
+        // Change the cursor style as a UI indicator.
+        map.getCanvas().style.cursor = 'pointer';
+
+        var coordinates = e.features[0].geometry.coordinates.slice();
+        var properties = e.features[0].properties;
+        var address = properties.Address;
+        var zoneDist = properties.ZoneDist1;
+        var unitsTotal = properties.UnitsTotal;
+        var yearBuilt = properties.YearBuilt;
+
+        // Ensure that if the map is zoomed out such that multiple
+        // copies of the feature are visible, the popup appears
+        // over the copy being pointed to.
+        while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+            coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+        }
+
+        // Create a popup content string with HTML markup
+        var popupContent = `<h3>Property Details</h3>` +
+            `<p><strong>Address:</strong> ${address}</p>` +
+            `<p><strong>Zoning:</strong> ${zoneDist}</p>` +
+            `<p><strong>Total Units:</strong> ${unitsTotal}</p>` +
+            `<p><strong>Year Built:</strong> ${yearBuilt}</p>`;
+
+        // Create a popup and add it to the map
+        popup = new mapboxgl.Popup()
+            .setLngLat(coordinates)
+            .setHTML(popupContent)
+            .addTo(map);
+    });
+
+    map.on('mouseleave', 'redhook-developments-layer', function () {
+        // Reset the cursor style
+        map.getCanvas().style.cursor = '';
+
+        // Remove the popup if it exists
+        if (popup) {
+            popup.remove();
+            popup = null; // Clear the reference
         }
     });
 
-    // Initially set this layer to be invisible
-    map.setLayoutProperty('redhook-developments-layer', 'visibility', 'none');
-
-
+    const markerDetails = [
+        {
+            coordinates: [-73.956555, 40.731390], // Greenpoint, Brooklyn
+            title: "Climate Gentrification",
+            location: "Greenpoint, Brooklyn, New York",
+            description: "Greenpoint, Brooklyn has seen rezoning and revitalization efforts aimed at reducing flood risk, which have led to increased property values and the displacement of lower-income residents.",
+            icon: "https://girlintheyellowtaxinyc.com/wp-content/uploads/2020/03/greenpointmain.jpg"
+        },
+        {
+            coordinates: [-74.01549, 40.70267], // Lower Manhattan
+            title: "Resilience Investment",
+            location: "Lower Manhattan, New York",
+            description: "The BIG U project in Lower Manhattan encompasses a series of resilience initiatives designed to protect the area from flooding while enhancing public spaces. However, these investments have also inadvertently increased the area's desirability and living costs, contributing to the displacement of long-standing, vulnerable communities.",
+            icon: "https://assets.the-atlas.com/UserContent/ProjectImages/714fa39b-9837-4f0b-b154-54646b466cb4.jpeg"
+        },
+        {
+            coordinates: [-73.755405, 40.603995], // Far Rockaway, Queens
+            title: "Impact on Vulnerable Populations",
+            location: "Far Rockaway, Queens, New York",
+            description: "Rockaway, Queens houses many NYCHA public housing units where residents face significant pressures from both environmental risks and economic constraints.",
+            icon: "https://images.globest.com/contrib/content/uploads/sites/409/2019/06/Ocean-Bay-housing-development.jpg"
+        },
+        {
+            coordinates: [-73.891380, 40.816195], // South Bronx
+            title: "Housing Crisis",
+            location: "South Bronx, Bronx, New York",
+            description: "The South Bronx has historically struggled with housing affordability and quality. As gentrification pressures increase, driven by climate change and the search for higher ground, the already scarce affordable housing stock is further threatened, exacerbating the housing crisis for its predominantly low-income residents.",
+            icon: "https://s3-prod.crainsnewyork.com/Bankside%201%20-%20Aerial.jpg"
+        },
+        {
+            coordinates: [-74.100153, 40.645245], // Staten Island
+            title: "Need for Policy Interventions",
+            location: "Staten Island, New York",
+            description: "Staten Island, particularly its North Shore, has seen increasing development pressures and is vulnerable to both coastal flooding and gentrification. This area requires urgent policy interventions to protect its diverse communities from displacement and to ensure sustainable development that includes robust flood defenses and affordable housing initiatives.",
+            icon: "https://offloadmedia.feverup.com/secretnyc.co/wp-content/uploads/2024/03/13103034/shutterstock_744909841-1024x684.jpg"
+        }
+    ];
 
 
 
