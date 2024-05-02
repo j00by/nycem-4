@@ -78,12 +78,12 @@ const config = {
             hidden: false,
             title: 'HOW HURRICANE SANDY RESHAPED RED HOOK',
             videoUrl: 'https://www.youtube.com/embed/07xJe529--U',
-            description: 'Red Hook, Brooklyn, is experiencing a profound transformation due to climate gentrification, particularly after Hurricane Sandy hit the area in 2012. Once a low-income neighborhood, Red Hook has seen a significant increase in property values and rents, becoming Brooklyn’s most expensive area for new home sales as its median sales price continues to rise annually.<a href="https://thebridgebk.com/extra_label/special-report/" target="_blank">[4]</a><br><br>The demographic landscape of Red Hook has also shifted dramatically. Historically, the neighborhood was predominantly Black, Hispanic, and Latino, with the population in 2000 comprising 43% Black and nearly half Hispanic or Latino. However, the latest data from 2023 paints a different picture, showing that 93.70% of the population is now White, with only 0.94% Black or African American, 1.98% Asian, 0.52% of other races, and 2.86% multiracial. This demographic shift is a clear indicator of the changing face of Red Hook, as the original community fabric unravels in the wake of new developments and rising costs, spotlighting the complex challenges of climate gentrification.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[5]</a><br><br>Video Source: <a href="https://www.youtube.com/watch?v=07xJe529--U&ab_channel=TheBridgeBK" target="_blank">TheBridgeBK</a>',
+            description: 'Red Hook, Brooklyn, is experiencing a profound transformation due to climate gentrification, particularly after Hurricane Sandy hit the area in 2012. Once a low-income neighborhood, Red Hook has seen a significant increase in property values and rents, becoming Brooklyn’s most expensive area for new home sales as its median sales price continues to rise annually. Despite its shift towards residential and upscale developments, Red Hook remains primarily zoned for manufacturing.<a href="https://thebridgebk.com/extra_label/special-report/" target="_blank">[4]</a><br><br><b>Legend: <font color="#c78d41">R5</font>, <font color="#c7b941">R6</font>, <font color="#70ca85">PARK</font>, <font color="#4B0082">M1-1</font>, <font color="#BA55D3">M1-1/R5</font>, <font color="#9932CC">M1-2</font>, <font color="#800080">M2-1</font>, <font color="#6A0DAD">M3-1</font></b><br><br>The demographic landscape of Red Hook has also shifted dramatically. Historically, the neighborhood was predominantly Black, Hispanic, and Latino, with the population in 2000 comprising 43% Black and nearly half Hispanic or Latino. However, the latest data from 2023 paints a different picture, showing that 93.70% of the population is now White, with only 0.94% Black or African American, 1.98% Asian, 0.52% of other races, and 2.86% multiracial. This demographic shift is a clear indicator of the changing face of Red Hook, as the original community fabric unravels in the wake of new developments and rising costs, spotlighting the complex challenges of climate gentrification.<a href="https://insideclimatenews.org/news/26102017/hurricane-sandy-anniversary-brooklyn-red-hook-vulnerable-waterfront-neighborhood-adapting/" target="_blank">[5]</a><br><br>Video Source: <a href="https://www.youtube.com/watch?v=07xJe529--U&ab_channel=TheBridgeBK" target="_blank">TheBridgeBK</a>',
             location: {
-                center: [-74.01111, 40.68243],
-                zoom: 14,
-                pitch: 70,
-                bearing: 41.60,
+                center: [-74.01202, 40.67931],
+                zoom: 15,
+                pitch: 52.41,
+                bearing: 91.26,
                 speed: 1, // slower than the default speed
                 curve: 1.5, // smooths the entry and exit of the animation
                 easing: (t) => t * (2 - t) // easing function for a more gentle animation
@@ -507,7 +507,7 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'visible');
             }
-            // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-REDHOOK CHAPTER **** NEED HELP
+            // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-REDHOOK CHAPTER 
             if (chapterId === 'climate-gent-redhook') {
                 map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'visible');
             }
@@ -571,7 +571,7 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'none');
             }
-            // Deactivate purple borough boundaries when exiting 'climate-gent-redhook' **** NEED HELP
+            // Deactivate purple borough boundaries when exiting 'climate-gent-redhook' 
             if (chapterId === 'climate-gent-redhook') {
                 map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'none');
             }
@@ -631,24 +631,26 @@ map.on("load", function () {
 
 
 
-    // ******* NEED HELP HERE BELOW, UPDATED TO CORRECT CRS 84 **************
     // CHAPTER CLIMATE-GENT-REDHOOK WITH ZONING INFORMATION 
     map.addSource('redhook-zoning', {
         type: 'geojson',
-        data: 'https://j00by.github.io/nycem-4/geojson/pluto-redhook.geojson'
+        data: 'https://j00by.github.io/nycem-4/geojson/pluto-redhook-crs84.geojson'
     })
     // add a fill layer using the PLUTO data
     map.addLayer({
         id: 'redhook-zoning-layer',
         type: 'fill',
+        layout: {
+            'visibility': 'none'  // Layer is initially hidden
+        },
         source: 'redhook-zoning',
         paint: {
             'fill-color': [
                 'match',
                 ['get', 'ZoneDist1'],
-                'R6', '#E6CEE3', // Lightest purple for residential zones
-                'R5', '#D8BFD8',
-                'PARK', '#DDA0DD', // Different color for parks
+                'R6', '#c7b941', // Lightest purple for residential zones
+                'R5', '#c78d41',
+                'PARK', '#70ca85', // Different color for parks
                 'M1-1/R5', '#BA55D3', // Mixed zone, closer to manufacturing
                 'M1-2', '#9932CC', // Starting of manufacturing zones
                 'M2-1', '#800080',
@@ -656,7 +658,7 @@ map.on("load", function () {
                 'M1-1', '#4B0082', // Darkest purple for heavy manufacturing
                 '#FFD700' // Fallback color for any other or undefined zones
             ],
-            'fill-opacity': 1
+            'fill-opacity': 0.6
         }
     });
     // ******* NEED HELP HERE ABOVE **************
