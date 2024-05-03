@@ -180,8 +180,8 @@ a:hover { /* Hover link color */
 
 .toggle-chapters {
     position: fixed;
-    top: 20px;
-    left: 10px;
+    bottom: 20px;
+    right: 10px;
     z-index: 10;
     color: #fff;
     background-image: linear-gradient(to right, #4a0096, #5b00b9);
