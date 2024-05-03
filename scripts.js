@@ -188,7 +188,7 @@ const config = {
             hidden: false,
             title: 'STATEN ISLAND’S FLOOD RISK AND REAL ESTATE',
             image: 'https://cdn.vox-cdn.com/thumbor/HCObmpC7h7ly9AQsTvU-ib7CxOI=/0x0:3000x2000/1200x0/filters:focal(0x0:3000x2000):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/9547425/builditback_AP.jpg',
-            description: 'In 2023, 1,657 properties (<img src=\"/images/dollar-home.png\" style=\"width: 15px; height: 15px;\"> 1-3 family home) were sold on or within 100 feet of Staten Island’s sea level rise zones, totaling $703.5 million in sales and averaging $425,000 per property. A 100-foot radius from flood zones accounts for surrounding homes’ danger, not just those on the water. This market activity in flood-prone areas raises severe worries about new residents’ long-term safety and financial security. Many of these people may have 30-year mortgages on flood-prone properties, a danger compounded by climate change’s increasing sea levels and more severe weather.<a href="https://www.nyc.gov/site/finance/property/property-annualized-sales-update.page" target="_blank"><sup>11</sup></a><br><br>Additionally, the history of repetitive losses in Staten Island, as recognized by NYCEM and FEMA’s National Flood Insurance Program (NFIP), further emphasizes the urgent need for comprehensive risk mitigation strategies to protect these communities and their investments.<a href="https://nychazardmitigation.com/documentation/hazard-profiles/flooding/" target="_blank"><sup>12</sup></a></font><br><br>Image Source: <a href="https://ny.curbed.com/2017/10/27/16554180/hurricane-sandy-relief-build-it-back-housing" target="_blank">Emily Nonko, Curbed</a>',
+            description: 'In 2023, 1,657 properties (<img src=\"https://j00by.github.io/nycem-4/images/dollar-home.png\" style=\"width: 15px; height: 15px;\"> 1-3 family home) were sold on or within 100 feet of Staten Island’s sea level rise zones, totaling $703.5 million in sales and averaging $425,000 per property. A 100-foot radius from flood zones accounts for surrounding homes’ danger, not just those on the water. This market activity in flood-prone areas raises severe worries about new residents’ long-term safety and financial security. Many of these people may have 30-year mortgages on flood-prone properties, a danger compounded by climate change’s increasing sea levels and more severe weather.<a href="https://www.nyc.gov/site/finance/property/property-annualized-sales-update.page" target="_blank"><sup>11</sup></a><br><br>Additionally, the history of repetitive losses in Staten Island, as recognized by NYCEM and FEMA’s National Flood Insurance Program (NFIP), further emphasizes the urgent need for comprehensive risk mitigation strategies to protect these communities and their investments.<a href="https://nychazardmitigation.com/documentation/hazard-profiles/flooding/" target="_blank"><sup>12</sup></a></font><br><br>Image Source: <a href="https://ny.curbed.com/2017/10/27/16554180/hurricane-sandy-relief-build-it-back-housing" target="_blank">Emily Nonko, Curbed</a>',
             location: {
                 center: [-74.10144, 40.58507],
                 zoom: 13.3,
@@ -615,7 +615,7 @@ map.on("load", function () {
     // CHAPTER CLIMATE-GENT-INTRO Add the GeoJSON source for borough boundaries
     map.addSource('borough-boundaries', {
         type: 'geojson',
-        data: '/geojson/borough-boundaries-simplified.geojson'
+        data: 'https://j00by.github.io/nycem-4/geojson/borough-boundaries-simplified.geojson'
     });
 
     // Add a layer to display the borough boundaries
@@ -638,7 +638,7 @@ map.on("load", function () {
     // CHAPTER CLIMATE-GENT-REDHOOK WITH ZONING INFORMATION 
     map.addSource('redhook-zoning', {
         type: 'geojson',
-        data: '/geojson/pluto-redhook-crs84.geojson'
+        data: 'https://j00by.github.io/nycem-4/geojson/pluto-redhook-crs84.geojson'
     })
     // add a fill layer using the PLUTO data
     map.addLayer({
@@ -687,7 +687,7 @@ map.on("load", function () {
         if (!map.getSource('borough-boundaries')) {
             map.addSource('borough-boundaries', {
                 type: 'geojson',
-                data: 'https://chriswhong.github.io/class-5-demo-2024/data/borough-boundaries-simplified.geojson',
+                data: 'https://j00by.github.io/nycem-4/geojson/borough-boundaries-simplified.geojson',
                 generateId: true
             });
         }
@@ -792,7 +792,7 @@ map.on("load", function () {
     // CHAPTER CLIMATE-GENT-REDHOOK-DEV POST SANDY DEVELOPMENTS 2012-2023
     map.addSource('redhook-developments', {
         type: 'geojson',
-        data: '/geojson/redhook-post-sandy-pluto.geojson'
+        data: 'https://j00by.github.io/nycem-4/geojson/redhook-post-sandy-pluto.geojson'
     });
 
     // LAYER FEATURE PAINT FOR REDHOOK DEVELOPMENTS
@@ -941,7 +941,7 @@ map.on("load", function () {
     // CHAPTER CLIMATE-GENT-NYCHA FOR ROCKAWAY VULNERABILITY
     map.addSource('nycha-rockaways', {
         type: 'geojson',
-        data: '/geojson/rockaway-nycha.geojson'
+        data: 'https://j00by.github.io/nycem-4/geojson/rockaway-nycha.geojson'
     });
 
     // Add a layer to display the NYCHA data
@@ -987,7 +987,7 @@ map.on("load", function () {
         // Add the source for Staten Island 2023 sales data
         map.addSource('staten-2023-sales', {
             type: 'geojson',
-            data: '/geojson/staten-2023-sales.geojson'
+            data: 'https://j00by.github.io/nycem-4/geojson/staten-2023-sales.geojson'
         });
 
         // Add a layer to display the sales data using the custom icon
@@ -1022,7 +1022,7 @@ map.on("load", function () {
     // CHAPTER CLIMATE-GENT-BRONX COMMERCIAL BUSINESS OWNERS STORY
     map.addSource('bronx-commercial', {
         type: 'geojson',
-        data: '/geojson/bronx-commercial.geojson'
+        data: 'https://j00by.github.io/nycem-4/geojson/bronx-commercial.geojson'
     });
 
     // Add a polygon layer to display the commercial areas
