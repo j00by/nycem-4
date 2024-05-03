@@ -9,6 +9,7 @@ body {
 a,
 a:visited { /* Normal and visited link color */
     color: #4a0096;
+    text-decoration: none;
 }
 
 a:hover { /* Hover link color */
@@ -179,8 +180,8 @@ a:hover { /* Hover link color */
 
 .toggle-chapters {
     position: fixed;
-    bottom: 20px;
-    right: 10px;
+    top: 20px;
+    left: 10px;
     z-index: 10;
     color: #fff;
     background-image: linear-gradient(to right, #4a0096, #5b00b9);
