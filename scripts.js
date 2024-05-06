@@ -978,7 +978,7 @@ map.on("load", function () {
 
     // CHAPTER CLIMATE-GENT-STATEN ISLAND 2023 SALES ON STORM SURGE
     // Load an image from an external URL.
-    map.loadImage('/images/dollar-home.png', function (error, image) {
+    map.loadImage('https://j00by.github.io/nycem-4/images/dollar-home.png', function (error, image) {
         if (error) throw error;
 
         // Add the image to the map style.
