@@ -54,7 +54,7 @@ if (config.title) {
 }
 
 if (config.subtitle) {
-    const subtitleText = document.createElement('h2');
+    const subtitleText = document.createElement('h3');
     subtitleText.innerText = config.subtitle;
     header.appendChild(subtitleText);
 }

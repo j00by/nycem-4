@@ -7,8 +7,8 @@ const config = {
     markerColor: '',
     theme: 'light',
     title: 'CLIMATE GENTRIFICATION AND ITS IMPACT ON NEW YORK CITY',
-    subtitle: '',
-    byline: 'This project, developed by Judy Huynh as part of the John D. Solomon Fellowship for Public Service and in collaboration with New York City Emergency Management, aims to explore and visualize the effects of climate gentrification across New York City neighborhoods. It incorporates educational insights and methodologies from NYU’s Advanced GIS class, led by Chris Whong, enhancing its analytical and visual capabilities through interactive web mapping techniques.',
+    subtitle: 'A CLOSER LOOK THROUGH MAPS AND STORIES BY JUDY HUYNH',
+    byline: '',
     footer: 'New York University | Spring 2024<br>Advanced GIS Interactive Web Mapping with Chris Whong<br>Special thanks to Ahmad Shaibani, Melissa Umberger, Jacob Ahola, & Rachel Meltzer!<br>Source: <a href="https://github.com/j00by/nycem-4" target="_blank">Project Repo</a>, <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling Template</a>',
     // CHAPTERS FOR EACH SCROLL  
     chapters: [

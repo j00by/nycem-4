@@ -38,6 +38,7 @@ a:hover { /* Hover link color */
 
 #header h1,
 #header h2,
+#header h3,
 #header p {
     margin: 0;
     padding: 1vh 1vw;
@@ -46,6 +47,9 @@ a:hover { /* Hover link color */
 
 #header h1 {
     font-size: 18px; /* Smaller font size for h1 */
+}
+#header h3 {
+    font-size: 15px; /* Smaller font size for h1 */
 }
 /* Footer styles */
 #footer {
@@ -180,8 +184,8 @@ a:hover { /* Hover link color */
 
 .toggle-chapters {
     position: fixed;
-    top: 20px;
-    left: 10px;
+    bottom: 20px;
+    right: 20px;
     z-index: 10;
     color: #fff;
     background-image: linear-gradient(to right, #8D93FC, #8D93FC);
