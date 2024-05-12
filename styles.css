@@ -33,7 +33,7 @@ a:hover { /* Hover link color */
     background-color: #000; /* Fallback color */
     background-image: linear-gradient(to right, #4a0096, #5b00b9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 5px; /* Add some padding for better spacing */
+    padding: 0px; /* Add some padding for better spacing */
 }
 
 #header h1,
@@ -66,7 +66,7 @@ a:hover { /* Hover link color */
 /* Story features padding */
 #features {
     padding-top: 10vh;
-    padding-bottom: 10vh;
+    padding-bottom: 5vh;
 }
 
 .hidden {
@@ -104,7 +104,7 @@ a:hover { /* Hover link color */
 }
 
 .step {
-    padding-bottom: 50vh;
+    padding-bottom: 30vh;
     /* margin-bottom: 10vh; */
     opacity: 0.25;
 }
@@ -114,7 +114,7 @@ a:hover { /* Hover link color */
 }
 
 .step div {
-    padding: 10px 25px;
+    padding: 25px 25px;
     line-height: 20px;
     font-size: 13px;
 }
@@ -144,7 +144,7 @@ a:hover { /* Hover link color */
 /* Scroll to explore more on bottom of page for user tips*/
 .scroll-prompt {
     position: fixed;
-    left: 10px;
+    right: 10px;
     bottom: 20px;
     transform: none; /* Remove the transform that centers it horizontally */
     text-align: center;
@@ -156,7 +156,7 @@ a:hover { /* Hover link color */
     padding: 8px; /* Add padding for better visibility */
     border-radius: 4px; /* Optional: rounded corners for better aesthetics */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
-    font-size: 14px; /* Smaller font size */
+    font-size: 20px; /* Smaller font size */
 }
 
 @keyframes bounce {
@@ -185,7 +185,7 @@ a:hover { /* Hover link color */
 .toggle-chapters {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    left: 20px;
     z-index: 10;
     color: #fff;
     background-image: linear-gradient(to right, #8D93FC, #8D93FC);

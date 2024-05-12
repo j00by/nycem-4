@@ -1,5 +1,5 @@
 // SCRIPTS PART 2/2
-// Mapbox adding layers 
+// MAPBOX SCROLLYTELLING LAYERS
 let initLoad = true;
 const layerTypes = {
     'fill': ['fill-opacity'],
@@ -38,7 +38,7 @@ const setLayerOpacity = (layer) => {
 
 
 
-// Stories configuration
+// STORIES CONFIURATION LIKE TITLE, SUBTITLE, FOOTER, CUSTOM STYLE AVAILABLE
 
 const story = document.getElementById('story');
 const features = document.createElement('div');
@@ -255,6 +255,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'visible');
             }
+            // ACTIVATE RHCR PROJECT ON CLIMATE-GENT-RHCR CHAPTER
+            if (chapterId === 'climate-gent-rhcr') {
+                map.setLayoutProperty('redhook-coastal-project', 'visibility', 'visible');
+            }
             // ACTIVATE BOROUGH BOUNDARIES PURPLE OUTLINE CLIMATE-GENT-REDHOOK CHAPTER 
             if (chapterId === 'climate-gent-redhook') {
                 map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'visible');
@@ -319,6 +323,10 @@ map.on("load", function () {
             if (chapterId === 'climate-gent-intro') {
                 map.setLayoutProperty('borough-boundaries-layer', 'visibility', 'none');
             }
+            // Deactivate RHCR PROJECT ON CLIMATE-GENT-RHCR CHAPTER
+            if (chapterId === 'climate-gent-rhcr') {
+                map.setLayoutProperty('redhook-coastal-project', 'visibility', 'none');
+            }
             // Deactivate purple borough boundaries when exiting 'climate-gent-redhook' 
             if (chapterId === 'climate-gent-redhook') {
                 map.setLayoutProperty('redhook-zoning-layer', 'visibility', 'none');
@@ -373,6 +381,30 @@ map.on("load", function () {
         paint: {
             'fill-color': '#4a0096',  // Purple color
             'fill-opacity': 0.3  // 30% opacity for the fill
+        }
+    });
+
+
+
+
+
+    // CHAPTER CLIMATE-GENT-RHCR -- Add the GeoJSON for FLOOD BARRIERS
+    map.addSource('redhook-coastal-project', {
+        type: 'geojson',
+        data: 'data/rhcr-project.geojson'
+    });
+
+    // Add a layer to display the borough boundaries
+    map.addLayer({
+        id: 'redhook-coastal-project',
+        type: 'line',
+        source: 'redhook-coastal-project',
+        layout: {
+            'visibility': 'none' // Layer is initially hidden
+        },
+        paint: {
+            'line-color': '#9935ff', // Sets the line color to purple
+            'line-width': 8          // Sets the line width to be thick
         }
     });
 
