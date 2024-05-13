@@ -66,7 +66,7 @@ a:hover { /* Hover link color */
 /* Story features padding */
 #features {
     padding-top: 10vh;
-    padding-bottom: 5vh;
+    padding-bottom: 10vh;
 }
 
 .hidden {
@@ -135,13 +135,16 @@ a:hover { /* Hover link color */
     }
 }
 
+
+
+
 /* Fix issue on mobile browser where scroll breaks  */
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
 .mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
     touch-action: unset;
 }
 
-/* Scroll to explore more on bottom of page for user tips*/
+/* SCROLL, USER HINT EXPERIENCE to explore more on bottom of page for user tips*/
 .scroll-prompt {
     position: fixed;
     right: 10px;
@@ -172,6 +175,9 @@ a:hover { /* Hover link color */
 }
 
 
+
+
+
 /* CUSTOM MARKERS FOR CLIMATE-GENT-CASCADE CHAPTER  */
 .custom-marker {
     cursor: pointer;
@@ -184,17 +190,18 @@ a:hover { /* Hover link color */
 
 .toggle-chapters {
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    z-index: 10;
+    bottom: 20px;  /* Distance from the bottom */
+    left: 20px;   /* Distance from the right */
+    z-index: 10;   /* Ensure it's on top of other elements */
     color: #fff;
-    background-image: linear-gradient(to right, #8D93FC, #8D93FC);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: none;
-    border-radius: 4px;
-    padding: 8px;
-    cursor: pointer;
-    font-size: 18px;
+    background-image: linear-gradient(to right, #4a0096, #5b00b9);  /* Gradient background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for better visibility */
+    border: none;  /* No borders */
+    border-radius: 4px;  /* Rounded corners */
+    padding: 8px 16px;  /* Padding for better touch area and aesthetics */
+    cursor: pointer;  /* Cursor indicates clickable area */
+    font-size: 18px;  /* Legible font size */
+    width: auto;  /* Auto width based on content */
 }
 
 /* Initially, the chapters are visible */
@@ -209,17 +216,22 @@ a:hover { /* Hover link color */
     transition: opacity 0.3s ease-out;
 }
 
-
 @media (max-width: 600px) {
     .toggle-chapters {
-        bottom: 10px; /* Ensure it remains at the bottom on mobile */
-        right: 10px;  /* Ensure it remains at the right on mobile */
-        font-size: 16px; /* Adjust font size if needed for smaller screens */
+        bottom: 10px;  /* Closer to the bottom edge on smaller screens */
+        left: 10px;   /* Closer to the right edge on smaller screens */
+        font-size: 16px;  /* Slightly smaller font size for smaller screens */
+        padding: 6px 12px;  /* Adjusted padding for smaller touch areas */
     }
     #header h1 {
-        font-size: 18px; /* Smaller font size for mobile devices */
+        font-size: 18px;  /* Adjust header font size for better readability on mobile */
     }
-
-    
 }
+
+
+/* BOOTSTRAP MODAL TOOLTIP CUSTOM COLORS - BUT NOT WORKING */
+.custom-tooltip {
+    --bs-tooltip-bg: var(--bd-violet-bg);
+    --bs-tooltip-color: var(--bs-white);
+  }
 

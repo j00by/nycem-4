@@ -62,9 +62,9 @@ if (config.subtitle) {
 if (config.byline) {
     const bylineText = document.createElement('p');
     bylineText.innerText = config.byline;
-    bylineText.style.fontSize = '13px'; 
-    bylineText.style.width = '75%';  
-    bylineText.style.margin = '0 auto'; 
+    bylineText.style.fontSize = '13px';
+    bylineText.style.width = '75%';
+    bylineText.style.margin = '0 auto';
     header.appendChild(bylineText);
 }
 
@@ -147,13 +147,13 @@ if (footer.innerText.length > 0) {
 }
 
 
- // TOGGLE ON AND OFF CHAPTERS
- document.addEventListener('DOMContentLoaded', function() {
+// TOGGLE ON AND OFF CHAPTERS
+document.addEventListener('DOMContentLoaded', function () {
     const toggleButton = document.getElementById('toggle-chapters');
     const storyElement = document.getElementById('story');
 
     if (toggleButton && storyElement) {
-        toggleButton.addEventListener('click', function() {
+        toggleButton.addEventListener('click', function () {
             storyElement.classList.toggle('hidden-chapters');
             // Optionally force the map to resize if it's still not behaving correctly
             if (window.map) map.resize();
@@ -164,6 +164,15 @@ if (footer.innerText.length > 0) {
 });
 
 
+// BOOTSTRAP MODAL TOOLTIP FOR DEFINITIONS
+document.addEventListener("DOMContentLoaded", function () {
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl, {
+            container: 'body' // This helps avoid rendering problems in complex components
+        });
+    });
+});
 
 
 
@@ -216,7 +225,7 @@ map.on("load", function () {
     // Add navigation controls
     var nav = new mapboxgl.NavigationControl();
     map.addControl(nav, 'top-right');
-    
+
     // scroller settings
     scroller
         .setup({
@@ -815,10 +824,50 @@ map.on("load", function () {
         }
     });
 
-    // Hide scroll prompt on scroll
-    window.addEventListener('scroll', function () {
+
+
+
+
+    // NUDGE USER TO SCROLL AND INTERACT, IF IDLE FOR MORE THAN 2 MIN, NUDGE AGAIN
+    function hideScrollPrompt() {
         document.querySelector('.scroll-prompt').style.display = 'none';
-    });
+    }
+
+    // Attach event listener to hide scroll prompt on scroll
+    window.addEventListener('scroll', hideScrollPrompt);
+
+    // Setup an idle timer variable
+    let idleTimer;
+    function resetIdleTimer() {
+        // Clear existing timer
+        clearTimeout(idleTimer);
+
+        // Set a new timer
+        idleTimer = setTimeout(function () {
+            // Check if the user has scrolled to the bottom of the page already
+            if ((window.innerHeight + window.scrollY) < document.body.offsetHeight) {
+                document.querySelector('.scroll-prompt').style.display = 'block'; // Show scroll prompt
+            }
+        }, 120000); // 120000 milliseconds = 2 minutes
+    }
+
+    // Listen for various user actions to reset the idle timer
+    window.addEventListener('mousemove', resetIdleTimer);
+    window.addEventListener('keypress', resetIdleTimer);
+    window.addEventListener('scroll', resetIdleTimer);
+
+    // Initialize the idle timer when the page loads
+    resetIdleTimer();
+
+
+
+
+
     
+    
+
+
+
+
 });
 
