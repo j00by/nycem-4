@@ -1,6 +1,6 @@
 # Climate Gentrification and Its Impact on New York City
 
-This project is developed as part of the John D Solomon Fellowship for Public Service and in collaboration with New York City Emergency Management. It aims to explore and visualize the effects of climate gentrification on various neighborhoods across New York City using interactive web mapping techniques.
+This project is developed as part of the John D Solomon Fellowship for Public Service and in collaboration with New York City Emergency Management. Its goal is to look into and show how climate gentrification affects different New York City neighborhoods by using interactive web mapping and the technical skills I learned in Chris Whong's Advanced GIS class at NYU.
 
 ## About
 
@@ -12,16 +12,18 @@ This project is developed as part of the John D Solomon Fellowship for Public Se
 
 ## Acknowledgements
 
-Special thanks to for their contributions and insights that greatly enhanced this project:
+Special thanks for their contributions and insights that greatly enhanced this project:
 - Ahmad Shaibani
 - Melissa Umberger
 - Jacob Ahola
 - Rachel Meltzer
 - Chris Whong
 
-## Project Overview
+## Research Questions
 
-Climate gentrification refers to the process where changes in the environment, particularly those due to climate change such as rising sea levels and increased frequency of extreme weather events, begin to affect urban real estate patterns and social demographics. This project uses the Mapbox Storytelling Template to create an engaging and educational experience that illustrates how these dynamics are playing out in New York City.
+1) How does climate gentrification, characterized by environmental changes such as rising sea levels and increased frequency of extreme weather events, influence urban real estate patterns and social demographics in New York City?
+
+2) How can this research be illustrated through the Mapbox Storytelling Template?
 
 ## Features
 
@@ -43,8 +45,8 @@ Access the live version of the project here:
 
 ## Spatial Analysis Sources
 - [2020 Sea Level Rise (100-Year Floodplain)](https://data.cityofnewyork.us/Environment/Sea-Level-Rise-Maps-2020s-100-year-Floodplain-/ezfn-5dsb)
-- Demographics from U.S. Census Data (Population Estimates Program)
-- Zoning and NYCHA data in Rockaway, Queens from NYC PLUTO
+- [Demographics from U.S. Census Data (Population Estimates Program)](https://www.census.gov/programs-surveys/popest.html)
+- [Zoning and NYCHA data in Rockaway, Queens from NYC PLUTO](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
 - [Red Hook Coastal Resilience (RHCR) Video](https://www.nyc.gov/site/rhcr/progress/public-meetings-and-workshops.page)
 - [NYC Property Details for Red Hook - 109 King St, Brooklyn](https://propertyinformationportal.nyc.gov/parcels/parcel/3005560121)
 - ["NYC Floodplains by the Number" by NYC DCP](https://www.nyc.gov/assets/planning/download/pdf/plans-studies/resilient-neighborhoods/floodplain-by-numbers.pdf)
