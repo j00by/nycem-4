@@ -2,6 +2,8 @@
 
 This project is developed as part of the John D Solomon Fellowship for Public Service and in collaboration with New York City Emergency Management. Its goal is to look into and show how climate gentrification affects different New York City neighborhoods by using interactive web mapping and the technical skills I learned in Chris Whong's Advanced GIS class at NYU.
 
+[Github Repository](https://github.com/j00by/nycem-4) | [Climate Gentrification Live Website](https://climategentrification.info/)
+
 ## About
 
 **Author:** Judy Huynh  
@@ -9,15 +11,6 @@ This project is developed as part of the John D Solomon Fellowship for Public Se
 **Semester:** Spring 2024  
 **Course:** Advanced GIS Interactive Web Mapping  
 **Instructor:** Chris Whong  
-
-## Acknowledgements
-
-Special thanks for their contributions and insights that greatly enhanced this project:
-- Ahmad Shaibani
-- Melissa Umberger
-- Jacob Ahola
-- Rachel Meltzer
-- Chris Whong
 
 ## Research Questions
 
@@ -31,19 +24,16 @@ Special thanks for their contributions and insights that greatly enhanced this p
 - **Data-Driven Storytelling:** Narratives built around data from various authoritative sources provide insights into how climate change impacts urban living spaces.
 - **Visualization of Trends:** Trends in property values, demographic changes, and urban planning are visualized over time to highlight the areas most affected by climate gentrification.
 
-## Source Code
+## Acknowledgements
 
-The project's source code and resources are available on GitHub:
+Special thanks for their contributions and insights that greatly enhanced this project:
+- Ahmad Shaibani
+- Melissa Umberger
+- Jacob Ahola
+- Rachel Meltzer
+- Chris Whong
 
-[Project Repository](https://github.com/j00by/nycem-4)
-
-## Live Project
-
-Access the live version of the project here:
-
-[Climate Gentrification in NYC](https://j00by.github.io/nycem-4/)
-
-## Spatial Analysis Sources
+## Data Sources
 - [2020 Sea Level Rise (100-Year Floodplain)](https://data.cityofnewyork.us/Environment/Sea-Level-Rise-Maps-2020s-100-year-Floodplain-/ezfn-5dsb)
 - [Demographics from U.S. Census Data (Population Estimates Program)](https://www.census.gov/programs-surveys/popest.html)
 - [Zoning and NYCHA data in Rockaway, Queens from NYC PLUTO](https://www.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page)
