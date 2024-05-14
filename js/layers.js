@@ -719,7 +719,7 @@ map.on("load", function () {
             location: "Staten Island, New York",
             description: "Staten Island, particularly its North Shore, has seen increasing development pressures and is vulnerable to both coastal flooding and gentrification. This area requires urgent policy interventions to protect its diverse communities from displacement and to ensure sustainable development that includes robust flood defenses and affordable housing initiatives.",
             icon: "https://offloadmedia.feverup.com/secretnyc.co/wp-content/uploads/2024/03/13103034/shutterstock_744909841-1024x684.jpg"
-        }
+        },
     ];
 
 
@@ -860,14 +860,9 @@ map.on("load", function () {
     resetIdleTimer();
 
 
-
-
-
     
-    
-
-
-
-
 });
+
+
+
 

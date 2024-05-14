@@ -159,7 +159,7 @@ a:hover { /* Hover link color */
     padding: 8px; /* Add padding for better visibility */
     border-radius: 4px; /* Optional: rounded corners for better aesthetics */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow for depth */
-    font-size: 20px; /* Smaller font size */
+    font-size: 18px; /* Smaller font size */
 }
 
 @keyframes bounce {
