@@ -277,16 +277,16 @@ const config = {
             onChapterExit: []
         },
         {
-            id: 'climate-gent-manage',
+            id: 'climate-gent-closing',
             alignment: 'left',
             hidden: false,
             title: 'CLOSING REMARKS AND ACKNOWLEDGEMENTS',
             image: '',
             description: 'I extend my heartfelt thanks to the <a href="https://www1.nyc.gov/site/em/about/internship.page" target="_blank">John D. Solomon Fellowship Program</a> for selecting me for the 2023-2024 cohort. My time at NYCEM has been incredibly enriching, both professionally and personally, and I am enthusiastic about the future contributions our collaborative efforts will make to emergency management and public service.<br><br>This project was developed as part of the Advanced GIS Interactive Web Mapping course at New York University, Spring 2024, under the guidance of <a href="https://github.com/chriswhong" target="_blank"> Chris Whong</a>. Special appreciation goes to Ahmad Shaibani, Melissa Umberger, Jacob Ahola, and Rachel Meltzer for their invaluable support and insights.<br><br>Sources: <a href="https://github.com/j00by/nycem-4" target="_blank">Project Repository</a>, <a href="https://github.com/mapbox/storytelling" target="_blank">Mapbox Storytelling Template</a>',
             location: {
-                center: [-74.10864, 40.69103],
-                zoom: 11,
-                pitch: 0,
+                center: [-73.98929, 40.69900],
+                zoom: 17,
+                pitch: 48.78,
                 bearing: 0,
                 speed: 1, 
                 curve: 1.5, 
